@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="container" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bus_transit.hr.learning.TestManagementController">
+   <children>
+      <AnchorPane fx:id="heading" prefHeight="60.0" prefWidth="628.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" color="GREY" height="5.0" radius="2.0" width="5.0" />
+         </effect>
+         <children>
+            <Label fx:id="lblTitle" layoutX="32.0" layoutY="20.0" onMouseClicked="#toEdit" text="Test Title Here" textFill="#2d2d2d" AnchorPane.leftAnchor="25.0">
+               <font>
+                  <Font name="SansSerif Regular" size="24.0" />
+               </font>
+               <tooltip>
+                  <Tooltip text="Click to Edit">
+                     <font>
+                        <Font name="Calibri" size="12.0" />
+                     </font>
+                  </Tooltip>
+               </tooltip>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label fx:id="lblDuration" layoutX="42.0" layoutY="30.0" onMouseClicked="#toEdit" text="30:00:00" textFill="#2d2d2d" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="20.0">
+               <font>
+                  <Font name="SansSerif Regular" size="24.0" />
+               </font>
+               <tooltip>
+                  <Tooltip text="Click to Edit">
+                     <font>
+                        <Font name="Calibri" size="12.0" />
+                     </font>
+                  </Tooltip>
+               </tooltip>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <JFXButton fx:id="btnNewQuestion" accessibleText="TestViewer.fxml" contentDisplay="GRAPHIC_ONLY" onAction="#showNewQuestionModal" prefHeight="31.0" prefWidth="8.0" ripplerFill="BLACK" style="-fx-background-color: #0078D7; -fx-background-radius: 2;" text="View" textFill="WHITE" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow color="GREY" height="10.0" offsetX="1.0" offsetY="1.0" radius="4.5" width="10.0" />
+               </effect>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="PLUS" size="20" />
+               </graphic>
+               <tooltip>
+                  <Tooltip text="New Question">
+                     <font>
+                        <Font name="Calibri" size="12.0" />
+                     </font>
+                  </Tooltip>
+               </tooltip>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <StackPane fx:id="stackpane" layoutX="10.0" layoutY="60.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="60.0">
+         <children>
+            <AnchorPane fx:id="content" minHeight="0.0" minWidth="0.0" prefHeight="676.0" prefWidth="1260.0">
+               <children>
+                  <ScrollPane hbarPolicy="NEVER" layoutX="1.0" layoutY="66.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <content>
+                        <VBox fx:id="vbxQuestions" prefHeight="2200.0" prefWidth="1333.0" />
+                     </content>
+                  </ScrollPane>
+               </children>
+               <StackPane.margin>
+                  <Insets top="10.0" />
+               </StackPane.margin>
+            </AnchorPane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

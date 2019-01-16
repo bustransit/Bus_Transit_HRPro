@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #f3f3f3;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bus_transit.Module3.DashboardController">
+   <children>
+      <AnchorPane fx:id="container" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0" />
+      <AnchorPane layoutX="74.0" layoutY="51.0" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" color="GREY" height="5.0" radius="2.0" width="5.0" />
+         </effect>
+         <children>
+            <Label layoutX="32.0" layoutY="20.0" text="ASSET MANAGEMENT" textFill="#2d2d2d" AnchorPane.leftAnchor="25.0">
+               <font>
+                  <Font name="SansSerif Regular" size="18.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btn_menu" contentDisplay="GRAPHIC_ONLY" layoutX="219.0" layoutY="18.0" onAction="#OpenMenu" prefHeight="58.0" prefWidth="58.0" ripplerFill="SILVER" style="-fx-background-color: transparent; -fx-background-radius: 0;" AnchorPane.bottomAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+               <graphic>
+                  <MaterialDesignIconView fill="#2d2d2d" glyphName="MENU" size="20" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

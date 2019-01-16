@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXNodesList?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bus_transit.hr.training.ParticipantTitledPaneController">
+   <children>
+      <TitledPane fx:id="tlpTraineeName" alignment="CENTER" expanded="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="420.0">
+         <content>
+            <AnchorPane fx:id="ancContainer" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <ScrollPane layoutX="19.200000762939453" layoutY="19.200000762939453" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <content>
+                        <JFXNodesList fx:id="ndTrainingList">
+                           <children>
+                              <Hyperlink text="ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd" wrapText="true" />
+                              <Hyperlink text="Hyperlink" />
+                              <Hyperlink text="Hyperlink" />
+                              <Hyperlink text="Hyperlink" />
+                           </children>
+                        </JFXNodesList>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+         </content>
+         <graphic>
+            <StackPane>
+               <children>
+                  <HBox prefHeight="65.0" prefWidth="424.0">
+                     <children>
+                        <FontAwesomeIconView size="14">
+                           <HBox.margin>
+                              <Insets top="12.0" />
+                           </HBox.margin>
+                        </FontAwesomeIconView>
+                        <JFXCheckBox fx:id="chkTrainee" alignment="TOP_LEFT" contentDisplay="TOP" onAction="#addToTrainees" prefHeight="38.0" prefWidth="43.0" text="'" />
+                        <ImageView fx:id="img" fitHeight="71.0" fitWidth="83.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/avatar6.png" />
+                           </image>
+                        </ImageView>
+                        <VBox prefHeight="65.0" prefWidth="335.0">
+                           <children>
+                              <Hyperlink fx:id="hplName" onAction="#goToPersonInfo" prefHeight="28.0" style="-fx-text-fill: black; -fx-font-size: 16;" text="Daniel Collin">
+                                 <font>
+                                    <Font name="Calibri Bold" size="24.0" />
+                                 </font>
+                              </Hyperlink>
+                              <Hyperlink fx:id="hplPosition" onAction="#goToPositionInfo" style="-fx-text-fill: black;" text="HR Manager">
+                                 <font>
+                                    <Font name="Calibri Bold" size="24.0" />
+                                 </font>
+                              </Hyperlink>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </StackPane>
+         </graphic>
+         <font>
+            <Font name="Calibri Bold" size="24.0" />
+         </font>
+      </TitledPane>
+   </children>
+   <effect>
+      <DropShadow color="#36363699" />
+   </effect>
+   <stylesheets>
+      <URL value="@../../../css/StyleSheet_1.css" />
+      <URL value="@../../../css/StyleSheet.css" />
+   </stylesheets>
+</AnchorPane>

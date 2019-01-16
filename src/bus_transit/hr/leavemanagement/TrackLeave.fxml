@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="564.0" prefWidth="756.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="bus_transit.hr.leavemanagement.TrackLeaveController">
+    <stylesheets>
+        <URL value="@trackleave.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane prefHeight="70.0" prefWidth="756.0">
+         <children>
+            <Label layoutY="-4.0" prefHeight="75.0" prefWidth="224.0" text="Track Leave" />
+         </children>
+      </AnchorPane>
+      <Label fx:id="lbFullName" layoutX="10.0" layoutY="82.0" prefHeight="36.0" prefWidth="186.0" text="Full Name" />
+      <Label fx:id="lbPosition" layoutX="9.0" layoutY="143.0" text="Position" />
+      <Label fx:id="lbFileDate" layoutX="10.0" layoutY="249.0" text="File Date (From/To)" />
+      <Label fx:id="lbDuration" layoutX="8.0" layoutY="299.0" text="Duration" />
+      <Label fx:id="lbTypeLeave" layoutX="5.0" layoutY="349.0" text="Type of Leave" />
+      <Label layoutX="5.0" layoutY="379.0" prefHeight="27.0" prefWidth="105.0" text="Leave Balance" />
+      <Label fx:id="lbDepartment" layoutX="9.0" layoutY="196.0" text="Department" />
+      <VBox fx:id="vbLeaveBalance" layoutX="3.0" layoutY="379.0" prefHeight="180.0" prefWidth="105.0" />
+   </children>
+</AnchorPane>

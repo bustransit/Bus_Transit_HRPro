@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="606.0" prefWidth="748.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bus_transit.hr.leavemanagement.LeaveSummaryController">
+   <children>
+      <StackPane fx:id="stackpane" layoutY="-2.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane prefHeight="63.0" prefWidth="754.0">
+               <children>
+                  <Label layoutY="-2.0" prefHeight="63.0" prefWidth="754.0" text="Leave Summary">
+                     <font>
+                        <Font name="Arial Black" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="546.0" prefWidth="748.0">
+               <children>
+                  <TableView fx:id="tblLeaveSummary" layoutX="28.0" layoutY="332.0" onMouseClicked="#loadTrackLea" prefHeight="200.0" prefWidth="699.0">
+                     <columns>
+                        <TableColumn prefWidth="63.0" text="Emp ID" />
+                        <TableColumn prefWidth="122.0" text="Full Name" />
+                        <TableColumn prefWidth="121.0" text="Position" />
+                        <TableColumn prefWidth="141.0" text="Department" />
+                        <TableColumn prefWidth="151.0" text="Leave Type" />
+                        <TableColumn prefWidth="100.0" text="Status" />
+                     </columns>
+                  </TableView>
+                  <JFXTextField layoutX="126.0" layoutY="33.0" />
+                  <Label layoutX="25.0" layoutY="38.0" text="Employee ID">
+                     <font>
+                        <Font name="Arial Black" size="13.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="635.0" layoutY="244.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="69.0" text="Print">
+                     <font>
+                        <Font name="Arial Black" size="11.0" />
+                     </font>
+                  </Button>
+                  <JFXTextField layoutX="126.0" layoutY="67.0" />
+                  <Label layoutX="25.0" layoutY="72.0" prefHeight="20.0" prefWidth="89.0" text="Full Name">
+                     <font>
+                        <Font name="Arial Black" size="13.0" />
+                     </font>
+                  </Label>
+                  <ComboBox layoutX="28.0" layoutY="292.0" prefHeight="31.0" prefWidth="150.0" />
+                  <Label layoutX="201.0" layoutY="138.0" text="Filter by:">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="433.0" layoutY="52.0" text="Leave Status">
+                     <font>
+                        <Font name="Arial Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="436.0" layoutY="86.0" text="Leave Type">
+                     <font>
+                        <Font name="Arial Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <JFXComboBox layoutX="518.0" layoutY="46.0" prefHeight="25.0" prefWidth="139.0" />
+                  <JFXComboBox layoutX="518.0" layoutY="80.0" prefHeight="25.0" prefWidth="139.0" />
+                  <Label layoutX="17.0" layoutY="138.0" text="Date Applied">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="24.0" layoutY="248.0" text="To">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="24.0" layoutY="194.0" text="From">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXDatePicker layoutX="69.0" layoutY="187.0" />
+                  <JFXDatePicker layoutX="69.0" layoutY="233.0" />
+                  <JFXButton layoutX="518.0" layoutY="292.0" prefHeight="31.0" prefWidth="209.0" text="Search" />
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

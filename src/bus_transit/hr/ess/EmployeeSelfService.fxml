@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.chart.StackedAreaChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" style="-fx-background-color: #f3f3f3;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bus_transit.hr.EmployeeSelfServiceController">
+   <children>
+      <AnchorPane accessibleText="hr/EmployeeSelfService.fxml" layoutX="74.0" layoutY="51.0" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" color="GREY" height="5.0" radius="2.0" width="5.0" />
+         </effect>
+         <children>
+            <Label layoutX="32.0" layoutY="20.0" text="Employee Self Service" textFill="#2d2d2d" AnchorPane.leftAnchor="25.0">
+               <font>
+                  <Font name="SansSerif Regular" size="18.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btn_menu" contentDisplay="GRAPHIC_ONLY" layoutX="219.0" layoutY="18.0" onAction="#back" prefHeight="58.0" prefWidth="58.0" ripplerFill="SILVER" style="-fx-background-color: transparent; -fx-background-radius: 0;" AnchorPane.bottomAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+               <graphic>
+                  <MaterialDesignIconView fill="#2d2d2d" glyphName="MENU" size="20" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
+         <children>
+            <JFXTabPane prefHeight="420.0" prefWidth="640.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <tabs>
+                  <Tab text="Payslip Reports">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <JFXButton fx:id="btn_pdf" layoutX="14.0" layoutY="14.0" style="-fx-background-color: #00ffff;" text="Create PDF Report" />
+                              <PieChart fx:id="myPiechart" layoutX="140.0" layoutY="-7.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="140.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children></AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab text="Bar Moto">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <JFXButton fx:id="btn_bar" layoutX="14.0" layoutY="14.0" style="-fx-background-color: #00ffff;" text="Show Report" />
+                              <BarChart fx:id="myBarChart" layoutX="126.0" layoutY="-7.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="126.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <xAxis>
+                                  <CategoryAxis side="BOTTOM" />
+                                </xAxis>
+                                <yAxis>
+                                  <NumberAxis side="LEFT" />
+                                </yAxis>
+                              </BarChart>
+                           </children></AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab text="Stacked Area Chart">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <JFXButton fx:id="btn_line" layoutX="14.0" layoutY="14.0" text="Create PDF Report" />
+                              <StackedAreaChart fx:id="myLineChart" layoutX="166.0" prefHeight="400.0" prefWidth="449.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <xAxis>
+                                  <NumberAxis side="BOTTOM" />
+                                </xAxis>
+                                <yAxis>
+                                  <NumberAxis side="LEFT" />
+                                </yAxis>
+                              </StackedAreaChart>
+                           </children></AnchorPane>
+                    </content>
+                  </Tab>
+               </tabs>
+            </JFXTabPane>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

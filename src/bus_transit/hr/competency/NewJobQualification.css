@@ -1,0 +1,17 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 11 27, 18, 9:32:28 PM
+    Author     : NelsonDelaTorre
+*/
+.scroll-pane .viewport{
+    -fx-background-color: white;
+}
+
+.jfx-tab-pane:top .tab-header-area .headers-region .tab{
+    -fx-pref-width: 200;
+    -fx-pref-height: 40;
+}

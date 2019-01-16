@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bus_transit.hr.LearningModulesController">
+   <children>
+      <AnchorPane fx:id="heading" prefHeight="60.0" prefWidth="628.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" color="GREY" height="5.0" radius="2.0" width="5.0" />
+         </effect>
+         <children>
+            <Label layoutX="32.0" layoutY="20.0" text="Module Title" textFill="#2d2d2d" AnchorPane.leftAnchor="25.0">
+               <font>
+                  <Font name="SansSerif Regular" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <ScrollPane hbarPolicy="NEVER" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="60.0">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="551.0" prefWidth="599.0" />
+         </content>
+      </ScrollPane>
+      <JFXButton fx:id="btn_export" contentDisplay="GRAPHIC_ONLY" layoutX="10.0" layoutY="10.0" onAction="#ExportToPDF" prefHeight="35.0" prefWidth="40.0" ripplerFill="BLACK" style="-fx-background-color: #0078D7; -fx-background-radius: 2;" text="EXPORT TO PDF" textFill="#757575" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+         <effect>
+            <DropShadow color="GREY" height="10.0" offsetX="1.0" offsetY="1.0" radius="4.5" width="10.0" />
+         </effect>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="FILE_PDF_ALT" size="20" />
+         </graphic>
+         <tooltip>
+            <Tooltip text="Save as PDF">
+               <font>
+                  <Font name="Calibri" size="12.0" />
+               </font>
+            </Tooltip>
+         </tooltip>
+      </JFXButton>
+   </children>
+</AnchorPane>

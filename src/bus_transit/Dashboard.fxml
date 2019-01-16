@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainContainer" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bus_transit.DashboardController">
+   <children>
+      <StackPane fx:id="stackpane" pickOnBounds="false" stylesheets="@../css/style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <BorderPane fx:id="bdrContainer" prefHeight="200.0" prefWidth="200.0">
+               <bottom>
+                  <AnchorPane fx:id="footer" prefHeight="3.0" prefWidth="900.0" style="-fx-background-color: #2d2d2d;" BorderPane.alignment="CENTER">
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" color="GREY" height="5.0" radius="2.0" width="5.0" />
+                     </effect>
+                     <children>
+                        <Label fx:id="txt_copyright" layoutX="14.0" layoutY="6.0" text="Copyright" textFill="WHITE" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="2.0">
+                           <font>
+                              <Font name="Calibri" size="13.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="COPYRIGHT" size="15" />
+                           </graphic>
+                        </Label>
+                        <HBox alignment="CENTER_RIGHT" layoutX="820.0" layoutY="2.0" spacing="8.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label fx:id="txt_datetime" text="Date &amp; Time" textFill="WHITE">
+                                 <font>
+                                    <Font name="Calibri" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Separator orientation="VERTICAL" prefHeight="25.0" prefWidth="0.0" />
+                              <JFXButton fx:id="btnChats" onAction="#showChatBox" text="Chats" textFill="WHITE">
+                                 <graphic>
+                                    <MaterialDesignIconView fill="#009eff" glyphName="MESSAGE" />
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                              <JFXButton fx:id="btnNetStat1" layoutX="98.0" layoutY="10.0" onAction="#showNetworkDialogPane" text="Connected" textFill="WHITE">
+                                 <graphic>
+                                    <MaterialDesignIconView fill="#00ff1e" glyphName="RECORD" />
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+               </bottom>
+               <top>
+                  <AnchorPane fx:id="header" prefHeight="3.0" prefWidth="900.0" style="-fx-background-color: #0078D7;" BorderPane.alignment="CENTER">
+                     <effect>
+                        <DropShadow color="GREY" height="10.0" radius="4.5" width="10.0" />
+                     </effect>
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="3.0" prefWidth="292.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <JFXButton fx:id="btn_menu" contentDisplay="GRAPHIC_ONLY" onAction="#OpenSideMenu" prefHeight="48.0" prefWidth="48.0" ripplerFill="SILVER" style="-fx-background-color: transparent; -fx-background-radius: 0;">
+                                 <graphic>
+                                    <MaterialDesignIconView fill="WHITE" glyphName="MENU" size="20" />
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                              <Label fx:id="lblNotifCount" text="Transportation System | Bus Transit" textFill="WHITE">
+                                 <font>
+                                    <Font name="Calibri" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="TOP_RIGHT" layoutX="754.0" prefHeight="50.0" prefWidth="0.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <JFXButton fx:id="btnNotif" accessibleText="system/UserManagement.fxml" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="10.0" layoutY="10.0" onAction="#showNotifPane" prefHeight="48.0" prefWidth="48.0" ripplerFill="RED" style="-fx-background-color: transparent; -fx-background-radius: 0;" HBox.hgrow="ALWAYS">
+                                 <graphic>
+                                    <StackPane prefHeight="0.0" prefWidth="52.0">
+                                       <children>
+                                          <MaterialDesignIconView fill="WHITE" glyphName="BELL" size="16" />
+                                          <Label fx:id="lblNotifCounter" alignment="CENTER" ellipsisString="99+" style="-fx-background-color: red; -fx-background-radius: 15;" text="99+" textFill="WHITE">
+                                             <StackPane.margin>
+                                                <Insets bottom="20.0" left="25.0" />
+                                             </StackPane.margin>
+                                             <font>
+                                                <Font name="Calibri" size="12.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+                                             </padding>
+                                          </Label>
+                                       </children>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </StackPane>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                              <JFXButton fx:id="btnUser" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" onAction="#showUserSetting" prefHeight="48.0" prefWidth="48.0" ripplerFill="SILVER" style="-fx-background-color: transparent; -fx-background-radius: 0;" HBox.hgrow="ALWAYS">
+                                 <graphic>
+                                    <MaterialDesignIconView fill="WHITE" glyphName="ACCOUNT_CIRCLE" size="16" />
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                              <JFXButton fx:id="btn_minimize" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" onAction="#Minimize" prefHeight="48.0" prefWidth="48.0" ripplerFill="SILVER" style="-fx-background-color: transparent; -fx-background-radius: 0;" HBox.hgrow="ALWAYS">
+                                 <graphic>
+                                    <MaterialDesignIconView fill="WHITE" glyphName="MINUS" size="16" />
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+               </top>
+               <center>
+                  <ScrollPane fx:id="scrlContent" hbarPolicy="NEVER" pannable="true" BorderPane.alignment="TOP_CENTER">
+                     <content>
+                        <AnchorPane fx:id="container">
+                           <children>
+                              <VBox alignment="TOP_CENTER" spacing="30.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <VBox fx:id="vbxLearning" prefHeight="112.0" prefWidth="825.0">
+                                       <children>
+                                          <Label prefHeight="32.0" prefWidth="825.0" style="-fx-text-fill: dark-gray;" text="Learning Management" textAlignment="CENTER" textFill="#6f6f6f">
+                                             <padding>
+                                                <Insets bottom="10.0" />
+                                             </padding>
+                                             <font>
+                                                <Font name="Calibri Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <HBox prefHeight="66.0" prefWidth="825.0" spacing="40.0">
+                                             <children>
+                                                <JFXButton contentDisplay="GRAPHIC_ONLY" prefHeight="154.0" prefWidth="189.0">
+                                                   <graphic>
+                                                      <VBox prefHeight="146.0" prefWidth="200.0" spacing="20.0" style="-fx-background-radius: 4;" styleClass="blue-300">
+                                                         <children>
+                                                            <Label accessibleRole="IMAGE_VIEW" alignment="CENTER" contentDisplay="RIGHT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="46.0" prefWidth="155.0" text="Modules" textFill="WHITE" VBox.vgrow="NEVER">
+                                                               <font>
+                                                                  <Font name="Calibri Bold" size="20.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label fx:id="lblNofModules" alignment="CENTER" contentDisplay="RIGHT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="63.0" prefWidth="153.0" text="5" textAlignment="CENTER" textFill="WHITE" VBox.vgrow="ALWAYS">
+                                                               <font>
+                                                                  <Font name="Calibri Bold" size="54.0" />
+                                                               </font>
+                                                               <graphic>
+                                                                  <FontAwesomeIconView accessibleRole="IMAGE_VIEW" fill="#ffffffe5" glyphName="BOOK" size="50" strokeLineJoin="ROUND" textAlignment="RIGHT" wrappingWidth="50.0" />
+                                                               </graphic>
+                                                            </Label>
+                                                         </children>
+                                                         <padding>
+                                                            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                                         </padding>
+                                                         <effect>
+                                                            <DropShadow color="#00000066" />
+                                                         </effect>
+                                                         <cursor>
+                                                            <Cursor fx:constant="HAND" />
+                                                         </cursor>
+                                                      </VBox>
+                                                   </graphic>
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </JFXButton>
+                                                <JFXButton contentDisplay="GRAPHIC_ONLY" prefHeight="154.0" prefWidth="189.0">
+                                                   <graphic>
+                                                      <VBox prefHeight="146.0" prefWidth="200.0" spacing="20.0" style="-fx-background-radius: 4;" styleClass="amber-A700">
+                                                         <children>
+                                                            <Label accessibleRole="IMAGE_VIEW" alignment="CENTER" contentDisplay="RIGHT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="46.0" prefWidth="155.0" text="Tests" textFill="WHITE" VBox.vgrow="NEVER">
+                                                               <font>
+                                                                  <Font name="Calibri Bold" size="20.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label fx:id="lblNofTest" alignment="CENTER" contentDisplay="RIGHT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="63.0" prefWidth="153.0" text="5" textAlignment="CENTER" textFill="WHITE" VBox.vgrow="ALWAYS">
+                                                               <font>
+                                                                  <Font name="Calibri Bold" size="54.0" />
+                                                               </font>
+                                                               <graphic>
+                                                                  <FontAwesomeIconView accessibleRole="IMAGE_VIEW" fill="#ffffffe5" glyphName="FILE_TEXT" size="50" strokeLineJoin="ROUND" textAlignment="RIGHT" wrappingWidth="50.0" />
+                                                               </graphic>
+                                                            </Label>
+                                                         </children>
+                                                         <padding>
+                                                            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                                         </padding>
+                                                         <effect>
+                                                            <DropShadow color="#00000066" />
+                                                         </effect>
+                                                         <cursor>
+                                                            <Cursor fx:constant="HAND" />
+                                                         </cursor>
+                                                      </VBox>
+                                                   </graphic>
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </JFXButton>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                    <VBox fx:id="hbxTrainings" prefHeight="198.0" prefWidth="758.0">
+                                       <children>
+                                          <Label prefHeight="32.0" prefWidth="757.0" style="-fx-text-fill: dark-gray;" text="Training Management" textAlignment="CENTER" textFill="#6f6f6f">
+                                             <padding>
+                                                <Insets bottom="10.0" />
+                                             </padding>
+                                             <font>
+                                                <Font name="Calibri Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <HBox prefHeight="166.0" prefWidth="758.0" spacing="30.0">
+                                             <children>
+                                                <JFXButton contentDisplay="GRAPHIC_ONLY" prefHeight="177.0" prefWidth="369.0" HBox.hgrow="ALWAYS">
+                                                   <graphic>
+                                                      <VBox prefHeight="158.0" prefWidth="344.0" spacing="20.0" style="-fx-background-radius: 4;" styleClass="deep-purple-A200">
+                                                         <children>
+                                                            <Label accessibleRole="IMAGE_VIEW" alignment="CENTER" contentDisplay="RIGHT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="35.0" prefWidth="318.0" text="Upcoming Trainings" textAlignment="CENTER" textFill="WHITE" VBox.vgrow="NEVER">
+                                                               <font>
+                                                                  <Font name="Calibri Bold" size="20.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="63.0" prefWidth="162.0" text="4" textFill="WHITE" VBox.vgrow="ALWAYS">
+                                                               <font>
+                                                                  <Font name="Calibri Bold" size="54.0" />
+                                                               </font>
+                                                               <graphic>
+                                                                  <FontAwesomeIconView accessibleRole="IMAGE_VIEW" fill="#ffffffe5" glyphName="COGS" size="50" strokeLineJoin="ROUND" textAlignment="RIGHT" wrappingWidth="78.0" />
+                                                               </graphic>
+                                                            </Label>
+                                                         </children>
+                                                         <padding>
+                                                            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                                         </padding>
+                                                         <effect>
+                                                            <DropShadow color="#00000066" />
+                                                         </effect>
+                                                         <cursor>
+                                                            <Cursor fx:constant="HAND" />
+                                                         </cursor>
+                                                      </VBox>
+                                                   </graphic>
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </JFXButton>
+                                                <JFXButton contentDisplay="GRAPHIC_ONLY" prefHeight="177.0" prefWidth="369.0">
+                                                   <graphic>
+                                                      <VBox prefHeight="158.0" prefWidth="344.0" spacing="20.0" style="-fx-background-radius: 4;" styleClass="blue-400">
+                                                         <children>
+                                                            <Label accessibleRole="IMAGE_VIEW" alignment="CENTER" contentDisplay="RIGHT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="35.0" prefWidth="318.0" text="Scheduled for Trainings" textFill="WHITE" VBox.vgrow="NEVER">
+                                                               <font>
+                                                                  <Font name="Calibri Bold" size="20.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="63.0" prefWidth="162.0" text="4" textFill="WHITE" VBox.vgrow="ALWAYS">
+                                                               <font>
+                                                                  <Font name="Calibri Bold" size="54.0" />
+                                                               </font>
+                                                               <graphic>
+                                                                  <FontAwesomeIconView accessibleRole="IMAGE_VIEW" fill="#ffffffe5" glyphName="BOOK" size="50" strokeLineJoin="ROUND" textAlignment="RIGHT" wrappingWidth="78.0" />
+                                                               </graphic>
+                                                            </Label>
+                                                         </children>
+                                                         <padding>
+                                                            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                                         </padding>
+                                                         <effect>
+                                                            <DropShadow color="#00000066" />
+                                                         </effect>
+                                                         <cursor>
+                                                            <Cursor fx:constant="HAND" />
+                                                         </cursor>
+                                                      </VBox>
+                                                   </graphic>
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </JFXButton>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="20.0" left="20.0" right="20.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </ScrollPane>
+               </center>
+            </BorderPane>
+         </children></StackPane>
+      <JFXDrawer fx:id="drawer" defaultDrawerSize="250.0" overLayVisible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+   </children>
+   <stylesheets>
+      <URL value="@../css/jfoenix-design.css" />
+      <URL value="@../css/StyleSheet_1.css" />
+   </stylesheets>
+</AnchorPane>

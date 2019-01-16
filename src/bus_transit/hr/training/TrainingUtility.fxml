@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="ancTrainingUtility" prefHeight="561.0" prefWidth="918.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bus_transit.hr.training.TrainingUtilityController">
+   <children>
+      <AnchorPane fx:id="ancHeader" layoutX="125.0" layoutY="50.0" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #0078D7;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label fx:id="lblTrainingHeader" accessibleText="new" layoutX="21.0" layoutY="14.0" text="Training Header" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="24.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btn_close" contentDisplay="GRAPHIC_ONLY" layoutX="162.0" layoutY="13.0" onAction="#Close" prefHeight="48.0" prefWidth="48.0" ripplerFill="RED" style="-fx-background-color: transparent; -fx-background-radius: 0;" visible="false" AnchorPane.bottomAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+               <graphic>
+                  <MaterialDesignIconView fill="WHITE" glyphName="CLOSE" size="20" />
+               </graphic>
+            </JFXButton>
+            <HBox fx:id="vbxActions" alignment="CENTER_RIGHT" layoutX="336.0" prefHeight="47.0" prefWidth="160.0" spacing="10.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <JFXButton fx:id="btnReset" onAction="#reset" prefHeight="27.0" prefWidth="79.0" style="-fx-background-color: white; -fx-background-radius: 2;" text="RESET" textFill="#757575">
+                     <font>
+                        <Font name="Calibri Bold" size="14.0" />
+                     </font>
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" color="SILVER" height="10.0" offsetX="1.0" offsetY="1.0" radius="4.5" width="10.0" />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton fx:id="btnSave" onAction="#save" prefHeight="27.0" prefWidth="77.0" styleClass="green-A700" text="SAVE" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri Bold" size="14.0" />
+                     </font>
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" color="GREY" height="10.0" offsetX="1.0" offsetY="1.0" radius="4.5" width="10.0" />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <JFXTabPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+         <tabs>
+            <Tab fx:id="tbTrainingDetails" text="Training Details">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <HBox minWidth="400.0" prefHeight="548.0" prefWidth="918.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <VBox fx:id="vbxContentCol1" prefHeight="528.0" prefWidth="110.0" spacing="10.0" HBox.hgrow="NEVER">
+                                 <children>
+                                    <Label fx:id="lblTrainingTitle" text="Title:" />
+                                    <JFXTextField fx:id="tfTrainingTitle" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#setTitle" prefHeight="40.0" prefWidth="300.0" promptText=" " />
+                                    <Group fx:id="grpNote1">
+                                       <children>
+                                          <Label fx:id="lblDescription" text="Description:" />
+                                          <TextArea fx:id="txtDescription" layoutY="27.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyReleased="#setDescription" prefHeight="120.0" prefWidth="300.0" />
+                                       </children>
+                                    </Group>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="91.0" prefWidth="290.0" spacing="20.0" VBox.vgrow="NEVER">
+                                       <children>
+                                          <Group>
+                                             <children>
+                                                <Label fx:id="lblTrainingType" text="Type:" />
+                                                <JFXComboBox fx:id="cbTrainingType" labelFloat="true" layoutY="27.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#setType" prefHeight="40.0" prefWidth="145.0" style="-fx-border-color: #DCDCDC; -fx-border-radius: 4;" />
+                                             </children>
+                                          </Group>
+                                          <Group>
+                                             <children>
+                                                <Label fx:id="lblParticipants" layoutX="59.0" layoutY="6.0" text="Number of Participants" />
+                                                <JFXTextField fx:id="tfNumberOfParticipants" layoutX="61.0" layoutY="37.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#setNumberOfParticipants" prefHeight="40.0" prefWidth="128.0" promptText=" " />
+                                             </children>
+                                          </Group>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox fx:id="vbxContentCol2" prefHeight="528.0" prefWidth="288.0" spacing="10.0" HBox.hgrow="NEVER">
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                                 <children>
+                                    <Group>
+                                       <children>
+                                          <Label fx:id="lblVenue" text="Venue" />
+                                          <JFXTextField fx:id="tfVenue" layoutY="27.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#setVenue" prefHeight="40.0" prefWidth="300.0" promptText=" " />
+                                       </children>
+                                    </Group>
+                                    <Group>
+                                       <children>
+                                          <Label fx:id="lblTrainingDate" text="Date: MM/DD/2018" />
+                                          <JFXDatePicker fx:id="dpTrainingDate" layoutY="27.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#setTrainingDate" prefHeight="40.0" prefWidth="300.0" />
+                                       </children>
+                                    </Group>
+                                    <HBox maxWidth="-Infinity" minWidth="-Infinity">
+                                       <children>
+                                          <Group>
+                                             <children>
+                                                <Label fx:id="lblTrainingStart" text="From: HH:MM AM/PM" />
+                                                <JFXTimePicker fx:id="tpTrainingStart" layoutY="27.0" maxWidth="-Infinity" minWidth="-Infinity" onAction="#setTrainingStart" prefHeight="40.0" prefWidth="150.0" />
+                                             </children>
+                                          </Group>
+                                          <Group>
+                                             <children>
+                                                <Label fx:id="lblTrainingEnd" text="To: HH:MM AM/PM" />
+                                                <JFXTimePicker fx:id="tpTrainingEnd" layoutY="27.0" maxWidth="-Infinity" minWidth="-Infinity" onAction="#setTrainingEnd" prefHeight="40.0" prefWidth="150.0" />
+                                             </children>
+                                          </Group>
+                                       </children>
+                                    </HBox>
+                                    <Group fx:id="grpNote" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <Label fx:id="lblNote" text="Note:" />
+                                          <TextArea fx:id="txtNote" layoutY="27.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyReleased="#setNote" prefHeight="120.0" prefWidth="300.0" />
+                                       </children>
+                                    </Group>
+                                    <HBox alignment="CENTER_LEFT">
+                                       <children>
+                                          <Label text="Status:" />
+                                          <JFXRadioButton fx:id="rbActive" onAction="#setTrainingStatus" text="Active">
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="status" />
+                                             </toggleGroup>
+                                          </JFXRadioButton>
+                                          <JFXRadioButton fx:id="rbInactive" onAction="#setTrainingStatus" selected="true" text="Inactive" toggleGroup="$status" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="528.0" prefWidth="235.0" spacing="10.0">
+                                 <children>
+                                    <Group>
+                                       <children>
+                                          <Label fx:id="lblFacilitator" text="Sponsor:" />
+                                          <JFXTextField fx:id="tfFacilitator" layoutY="27.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#setFacilitator" prefHeight="40.0" prefWidth="224.0" promptText=" " />
+                                       </children>
+                                    </Group>
+                                    <Group>
+                                       <children>
+                                          <Label fx:id="lblTrainor" text="Trainors/Speakers:" />
+                                          <JFXTextField fx:id="tfTrainor" layoutY="27.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#setTrainor" prefHeight="40.0" prefWidth="225.0" promptText=" " />
+                                       </children>
+                                    </Group>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="tbTrainingParticipants" text="Participants">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox fx:id="vbxContentCol3" layoutX="40.0" layoutY="21.0" prefHeight="527.0" prefWidth="445.0" spacing="10.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label fx:id="lblTraineesForTraining" prefHeight="29.0" prefWidth="258.0" text="Participants">
+                                 <font>
+                                    <Font name="Calibri" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Group>
+                                 <children>
+                                    <Label fx:id="lblVenue1" text="Search by Lastname or Position">
+                                       <font>
+                                          <Font size="11.0" />
+                                       </font>
+                                    </Label>
+                                    <JFXCheckBox fx:id="chSelectAll" layoutX="158.0" prefHeight="17.0" prefWidth="63.0" text="Select All" />
+                                    <JFXTextField fx:id="tfSearchTrainees" labelFloat="true" layoutY="26.0" onKeyReleased="#searchTrainees" prefHeight="39.0" prefWidth="241.0" />
+                                 </children>
+                              </Group>
+                              <ScrollPane prefHeight="455.0" prefWidth="259.0" style="-fx-background-color: white;">
+                                 <content>
+                                    <FlowPane>
+                                       <children>
+                                          <TitledPane animated="false" text="Daniel Collin adfasfd asdf asdf asdf asdf as f">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                             </content>
+                                             <graphic>
+                                                <JFXCheckBox prefHeight="17.0" prefWidth="39.0" text="." />
+                                             </graphic>
+                                          </TitledPane>
+                                          <TitledPane animated="false" text="Daniel Collin adfasfd asdf asdf asdf asdf as f">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                             </content>
+                                             <graphic>
+                                                <JFXCheckBox prefHeight="17.0" prefWidth="39.0" text="." />
+                                             </graphic>
+                                          </TitledPane>
+                                          <TitledPane animated="false" text="Daniel Collin adfasfd asdf asdf asdf asdf as f">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                             </content>
+                                             <graphic>
+                                                <JFXCheckBox prefHeight="17.0" prefWidth="39.0" text="." />
+                                             </graphic>
+                                          </TitledPane>
+                                          <TitledPane animated="false" text="Daniel Collin adfasfd asdf asdf asdf asdf as f">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                             </content>
+                                             <graphic>
+                                                <JFXCheckBox prefHeight="17.0" prefWidth="39.0" text="." />
+                                             </graphic>
+                                          </TitledPane>
+                                          <TitledPane animated="false" text="Daniel Collin adfasfd asdf asdf asdf asdf as f">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                             </content>
+                                             <graphic>
+                                                <JFXCheckBox prefHeight="17.0" prefWidth="39.0" text="." />
+                                             </graphic>
+                                          </TitledPane>
+                                          <TitledPane animated="false" text="Daniel Collin adfasfd asdf asdf asdf asdf as f">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                             </content>
+                                             <graphic>
+                                                <JFXCheckBox prefHeight="17.0" prefWidth="39.0" text="." />
+                                             </graphic>
+                                          </TitledPane>
+                                          <TitledPane animated="false" text="Daniel Collin adfasfd asdf asdf asdf asdf as f">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                             </content>
+                                             <graphic>
+                                                <JFXCheckBox prefHeight="17.0" prefWidth="39.0" text="." />
+                                             </graphic>
+                                          </TitledPane>
+                                          <TitledPane animated="false" text="Daniel Collin adfasfd asdf asdf asdf asdf as f">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                             </content>
+                                             <graphic>
+                                                <JFXCheckBox prefHeight="17.0" prefWidth="39.0" text="." />
+                                             </graphic>
+                                          </TitledPane>
+                                          <TitledPane animated="false" text="Daniel Collin adfasfd asdf asdf asdf asdf as f">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                             </content>
+                                             <graphic>
+                                                <JFXCheckBox prefHeight="17.0" prefWidth="39.0" text="." />
+                                             </graphic>
+                                          </TitledPane>
+                                          <TitledPane animated="false" text="Daniel Collin adfasfd asdf asdf asdf asdf as f">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                             </content>
+                                             <graphic>
+                                                <JFXCheckBox prefHeight="17.0" prefWidth="39.0" text="." />
+                                             </graphic>
+                                          </TitledPane>
+                                          <TitledPane animated="false" text="Daniel Collin adfasfd asdf asdf asdf asdf as f">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                             </content>
+                                             <graphic>
+                                                <JFXCheckBox prefHeight="17.0" prefWidth="39.0" text="." />
+                                             </graphic>
+                                          </TitledPane>
+                                          <TitledPane animated="false" text="Daniel Collin adfasfd asdf asdf asdf asdf as f">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                             </content>
+                                             <graphic>
+                                                <JFXCheckBox prefHeight="17.0" prefWidth="39.0" text="." />
+                                             </graphic>
+                                          </TitledPane>
+                                          <TitledPane animated="false" text="Daniel Collin adfasfd asdf asdf asdf asdf as f">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                             </content>
+                                             <graphic>
+                                                <JFXCheckBox prefHeight="17.0" prefWidth="39.0" text="." />
+                                             </graphic>
+                                          </TitledPane>
+                                          <TitledPane animated="false" text="Daniel Collin adfasfd asdf asdf asdf asdf as f">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                             </content>
+                                             <graphic>
+                                                <JFXCheckBox prefHeight="17.0" prefWidth="39.0" text="." />
+                                             </graphic>
+                                          </TitledPane>
+                                          <TitledPane animated="false" text="Daniel Collin adfasfd asdf asdf asdf asdf as f">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                             </content>
+                                             <graphic>
+                                                <JFXCheckBox prefHeight="17.0" prefWidth="39.0" text="." />
+                                             </graphic>
+                                          </TitledPane>
+                                          <TitledPane animated="false" text="Daniel Collin adfasfd asdf asdf asdf asdf as f">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                             </content>
+                                             <graphic>
+                                                <JFXCheckBox prefHeight="17.0" prefWidth="39.0" text="." />
+                                             </graphic>
+                                          </TitledPane>
+                                          <TitledPane animated="false" text="Daniel Collin adfasfd asdf asdf asdf asdf as f">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                             </content>
+                                             <graphic>
+                                                <JFXCheckBox prefHeight="17.0" prefWidth="39.0" text="." />
+                                             </graphic>
+                                          </TitledPane>
+                                       </children>
+                                    </FlowPane>
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </AnchorPane>
+              </content>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+   </children>
+   <stylesheets>
+      <URL value="@../../../css/jfoenix-design.css" />
+      <URL value="@../../../css/StyleSheet.css" />
+      <URL value="@../../../css/StyleSheet_1.css" />
+   </stylesheets>
+</AnchorPane>

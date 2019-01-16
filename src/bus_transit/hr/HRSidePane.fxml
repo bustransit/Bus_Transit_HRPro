@@ -1,0 +1,1037 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="632.0" prefWidth="250.0" style="-fx-background-color: white;" stylesheets="@../../css/StyleSheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bus_transit.hr.HRSidePaneController">
+   <children>
+      <StackPane prefHeight="125.0" prefWidth="250.0">
+         <children>
+            <ImageView fitHeight="121.0" fitWidth="250.0" pickOnBounds="true" StackPane.alignment="TOP_LEFT">
+               <image>
+                  <Image url="@../../images/Login-Wallpaper.jpg" />
+               </image>
+            </ImageView>
+            <VBox prefHeight="87.0" prefWidth="240.0" spacing="4.0" StackPane.alignment="BOTTOM_LEFT">
+               <children>
+                  <Label fx:id="lblEmployeeFullName" text="Employee Name" textFill="WHITE">
+                     <font>
+                        <Font name="SansSerif Bold" size="14.0" />
+                     </font>
+                     <effect>
+                        <DropShadow spread="0.5" />
+                     </effect>
+                  </Label>
+                  <Label fx:id="lblDepartment" text="Department" textFill="WHITE">
+                     <font>
+                        <Font name="SansSerif Regular" size="11.0" />
+                     </font>
+                     <effect>
+                        <DropShadow spread="0.5" />
+                     </effect>
+                  </Label>
+                  <Label fx:id="lblPosition" text="Position" textFill="WHITE">
+                     <font>
+                        <Font name="SansSerif Regular" size="11.0" />
+                     </font>
+                     <effect>
+                        <DropShadow spread="0.5" />
+                     </effect>
+                  </Label>
+               </children>
+               <StackPane.margin>
+                  <Insets left="10.0" top="50.0" />
+               </StackPane.margin>
+            </VBox>
+         </children>
+      </StackPane>
+      <ScrollPane hbarPolicy="NEVER" layoutY="121.0" prefHeight="511.0" prefWidth="250.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="121.0">
+         <content>
+            <AnchorPane prefHeight="397.0" prefWidth="252.0">
+               <children>
+                  <JFXButton id="module_button" fx:id="dashboard" accessibleText="Dashboard.fxml" alignment="BASELINE_LEFT" buttonType="RAISED" onAction="#loadDashboard" prefHeight="39.0" prefWidth="250.0" ripplerFill="#0078d7" style="-fx-background-color: white;" text="Dashboard" textFill="#868686">
+                     <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView id="module_icon" fill="#868686" glyphName="DASHBOARD" size="24" textAlignment="CENTER" wrappingWidth="50.0" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <Accordion layoutY="40.0" prefHeight="357.0" prefWidth="252.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="42.0">
+                    <panes>
+                        <TitledPane fx:id="tlpApplicant" accessibleText="hr1" styleClass="tlp-applicant" text="Applicant Management">
+                           <content>
+                              <VBox fx:id="vbxModules11" prefHeight="200.0" prefWidth="250.0" spacing="10.0">
+                                 <children>
+                                    <JFXButton id="module_button" fx:id="trainingManagement11" accessibleText="hr/training/TrainingManagement.fxml" alignment="BASELINE_LEFT" onAction="#loadFunction" prefHeight="25.0" prefWidth="228.0" ripplerFill="#0078d7" text="Applicants" textFill="#868686">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="12.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView id="module_icon" fill="#868686" glyphName="CIRCLE" size="8" textAlignment="CENTER" wrappingWidth="20.0" />
+                                       </graphic>
+                                       <VBox.margin>
+                                          <Insets left="10.0" />
+                                       </VBox.margin>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                    <JFXButton id="module_button" fx:id="trainingManagement111" accessibleText="hr/training/TrainingManagement.fxml" alignment="BASELINE_LEFT" layoutX="30.0" layoutY="20.0" onAction="#loadFunction" prefHeight="25.0" prefWidth="228.0" ripplerFill="#0078d7" text="Applicants" textFill="#868686">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="12.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView id="module_icon" fill="#868686" glyphName="CIRCLE" size="8" textAlignment="CENTER" wrappingWidth="20.0" />
+                                       </graphic>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                           </content>
+                           <graphic>
+                              <FontAwesomeIconView id="module_icon" fill="#868686" size="18" textAlignment="CENTER" wrappingWidth="28.0" />
+                           </graphic>
+                        </TitledPane>
+                        <TitledPane fx:id="tlpRecruitment" text="Recruitment">
+                           <content>
+                              <VBox fx:id="vbxModules23" prefHeight="200.0" prefWidth="250.0" spacing="10.0">
+                                 <children>
+                                    <JFXButton id="module_button" fx:id="learningManagement23" accessibleText="hr/learning/LearningManagement.fxml" alignment="BASELINE_LEFT" buttonType="RAISED" onAction="#loadFunction" prefHeight="25.0" prefWidth="245.0" ripplerFill="#0078d7" text="Job Vacancies" textFill="#868686">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="12.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="10.0" />
+                                       </VBox.margin>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <graphic>
+                                          <FontAwesomeIconView id="module_icon" fill="#868686" glyphName="CIRCLE" size="8" textAlignment="CENTER" wrappingWidth="20.0" />
+                                       </graphic>
+                                    </JFXButton>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                           </content>
+                           <graphic>
+                              <FontAwesomeIconView id="module_icon" fill="#868686" size="18" textAlignment="CENTER" wrappingWidth="28.0" />
+                           </graphic>
+                        </TitledPane>
+                        <TitledPane fx:id="tlpPerformance" text="Performance Management">
+                           <content>
+                              <VBox fx:id="vbxModules211" prefHeight="200.0" prefWidth="250.0" spacing="10.0">
+                                 <children>
+                                    <JFXButton id="module_button" fx:id="learningManagement211" accessibleText="hr/learning/LearningManagement.fxml" alignment="BASELINE_LEFT" buttonType="RAISED" onAction="#loadFunction" prefHeight="25.0" prefWidth="245.0" ripplerFill="#0078d7" text="Learning Management" textFill="#868686">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="12.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView id="module_icon" fill="#868686" glyphName="CIRCLE" size="8" textAlignment="CENTER" wrappingWidth="20.0" />
+                                       </graphic>
+                                       <VBox.margin>
+                                          <Insets left="10.0" />
+                                       </VBox.margin>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                    <JFXButton id="module_button" fx:id="trainingManagement211" accessibleText="hr/training/TrainingManagement.fxml" alignment="BASELINE_LEFT" onAction="#loadFunction" prefHeight="25.0" prefWidth="228.0" ripplerFill="#0078d7" text="Training Management" textFill="#868686">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="12.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView id="module_icon" fill="#868686" glyphName="CIRCLE" size="8" textAlignment="CENTER" wrappingWidth="20.0" />
+                                       </graphic>
+                                       <VBox.margin>
+                                          <Insets left="10.0" />
+                                       </VBox.margin>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                    <JFXButton id="module_button" fx:id="competencyManagement211" accessibleText="hr/competency/CompetencyManagement.fxml" alignment="BASELINE_LEFT" onAction="#loadFunction" prefHeight="25.0" prefWidth="321.0" ripplerFill="#0078d7" text="Competency Management" textFill="#868686">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="12.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView id="module_icon" fill="#868686" glyphName="CIRCLE" size="8" textAlignment="CENTER" wrappingWidth="20.0" />
+                                       </graphic>
+                                       <VBox.margin>
+                                          <Insets left="10.0" />
+                                       </VBox.margin>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                    <JFXButton id="module_button" fx:id="successionPlanning211" accessibleText="hr/succession/SuccessionPlanning.fxml" alignment="BASELINE_LEFT" onAction="#loadFunction" prefHeight="25.0" prefWidth="321.0" ripplerFill="#0078d7" text="Succession Planning" textFill="#868686">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="12.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView id="module_icon" fill="#868686" glyphName="CIRCLE" size="8" textAlignment="CENTER" wrappingWidth="20.0" />
+                                       </graphic>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <VBox.margin>
+                                          <Insets left="10.0" />
+                                       </VBox.margin>
+                                    </JFXButton>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                           </content>
+                           <graphic>
+                              <FontAwesomeIconView id="module_icon" fill="#868686" size="18" textAlignment="CENTER" wrappingWidth="28.0" />
+                           </graphic>
+                        </TitledPane>
+                        <TitledPane fx:id="tlpNewHire" text="New Hire On Board">
+                           <content>
+                              <VBox fx:id="vbxModules221" prefHeight="200.0" prefWidth="250.0" spacing="10.0">
+                                 <children>
+                                    <JFXButton id="module_button" fx:id="learningManagement221" accessibleText="hr/learning/LearningManagement.fxml" alignment="BASELINE_LEFT" buttonType="RAISED" onAction="#loadFunction" prefHeight="25.0" prefWidth="245.0" ripplerFill="#0078d7" text="Learning Management" textFill="#868686">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="12.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView id="module_icon" fill="#868686" glyphName="GRADUATION_CAP" size="24" textAlignment="CENTER" wrappingWidth="50.0" />
+                                       </graphic>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                    <JFXButton id="module_button" fx:id="trainingManagement221" accessibleText="hr/training/TrainingManagement.fxml" alignment="BASELINE_LEFT" onAction="#loadFunction" prefHeight="25.0" prefWidth="228.0" ripplerFill="#0078d7" text="Training Management" textFill="#868686">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="12.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView id="module_icon" fill="#868686" glyphName="GEARS" size="24" textAlignment="CENTER" wrappingWidth="50.0" />
+                                       </graphic>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                    <JFXButton id="module_button" fx:id="competencyManagement221" accessibleText="hr/competency/CompetencyManagement.fxml" alignment="BASELINE_LEFT" onAction="#loadFunction" prefHeight="25.0" prefWidth="321.0" ripplerFill="#0078d7" text="Competency Management" textFill="#868686">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="12.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView id="module_icon" fill="#868686" glyphName="BOOK" size="24" textAlignment="CENTER" wrappingWidth="50.0" />
+                                       </graphic>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                    <JFXButton id="module_button" fx:id="successionPlanning221" accessibleText="hr/succession/SuccessionPlanning.fxml" alignment="BASELINE_LEFT" onAction="#loadFunction" prefHeight="25.0" prefWidth="321.0" ripplerFill="#0078d7" text="Succession Planning" textFill="#868686">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="12.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView id="module_icon" fill="#868686" glyphName="LINE_CHART" size="24" textAlignment="CENTER" wrappingWidth="50.0" />
+                                       </graphic>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                           </content>
+                           <graphic>
+                              <FontAwesomeIconView id="module_icon" fill="#868686" size="18" textAlignment="CENTER" wrappingWidth="28.0" />
+                           </graphic>
+                        </TitledPane>
+                        <TitledPane fx:id="tlpSocial" text="Social Recognition">
+                           <content>
+                              <VBox fx:id="vbxModules3" prefHeight="200.0" prefWidth="250.0" spacing="10.0">
+                                 <children>
+                                    <JFXButton id="module_button" fx:id="competencyManagement1" accessibleText="hr/competency/CompetencyManagement.fxml" alignment="BASELINE_LEFT" onAction="#loadFunction" prefHeight="25.0" prefWidth="321.0" ripplerFill="#0078d7" text="Modules" textFill="#868686">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="12.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView id="module_icon" fill="#868686" glyphName="BOOK" size="24" textAlignment="CENTER" wrappingWidth="50.0" />
+                                       </graphic>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                    <JFXButton id="module_button" fx:id="competencyManagement31" accessibleText="hr/competency/CompetencyManagement.fxml" alignment="BASELINE_LEFT" onAction="#loadFunction" prefHeight="25.0" prefWidth="321.0" ripplerFill="#0078d7" text="Tests" textFill="#868686">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="12.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView id="module_icon" fill="#868686" glyphName="LIGHTBULB_ALT" size="24" textAlignment="CENTER" wrappingWidth="50.0" />
+                                       </graphic>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                    <JFXButton id="module_button" fx:id="successionPlanning1" accessibleText="hr/succession/SuccessionPlanning.fxml" alignment="BASELINE_LEFT" onAction="#loadFunction" prefHeight="25.0" prefWidth="321.0" ripplerFill="#0078d7" text="Test Results" textFill="#868686">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="12.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView id="module_icon" fill="#868686" glyphName="BAR_CHART" size="24" textAlignment="CENTER" wrappingWidth="50.0" />
+                                       </graphic>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                           </content>
+                           <graphic>
+                              <FontAwesomeIconView id="module_icon" fill="#868686" size="18" textAlignment="CENTER" wrappingWidth="28.0" />
+                           </graphic>
+                        </TitledPane>
+                        <TitledPane fx:id="tlpTraining" accessibleText="hr2" text="Training Management">
+                           <content>
+                              <VBox fx:id="vbxModules1" prefHeight="200.0" prefWidth="250.0" spacing="10.0">
+                                 <children>
+                                    <JFXButton id="module_button" fx:id="trainingManagement1" accessibleText="hr/training/TrainingManagement.fxml" alignment="BASELINE_LEFT" onAction="#loadFunction" prefHeight="25.0" prefWidth="228.0" ripplerFill="#0078d7" text="Trainings" textFill="#868686">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="12.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView id="module_icon" fill="#868686" glyphName="GEARS" size="24" textAlignment="CENTER" wrappingWidth="50.0" />
+                                       </graphic>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                           </content>
+                           <graphic>
+                              <FontAwesomeIconView id="module_icon" fill="#868686" size="18" textAlignment="CENTER" wrappingWidth="28.0" />
+                           </graphic>
+                        </TitledPane>
+                      <TitledPane fx:id="tlpLearning" accessibleText="hr2" text="Learning Management">
+                        <content>
+                              <VBox fx:id="vbxModules" prefHeight="200.0" prefWidth="250.0" spacing="10.0">
+                                 <children>
+                                    <JFXButton id="module_button" fx:id="competencyManagement" accessibleText="hr/competency/CompetencyManagement.fxml" alignment="BASELINE_LEFT" onAction="#loadFunction" prefHeight="25.0" prefWidth="321.0" ripplerFill="#0078d7" text="Learning Modules" textFill="#868686">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="12.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView id="module_icon" fill="#868686" glyphName="BOOK" size="24" textAlignment="CENTER" wrappingWidth="50.0" />
+                                       </graphic>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                    <JFXButton id="module_button" fx:id="competencyManagement3" accessibleText="hr/competency/CompetencyManagement.fxml" alignment="BASELINE_LEFT" onAction="#loadFunction" prefHeight="25.0" prefWidth="321.0" ripplerFill="#0078d7" text="Tests" textFill="#868686">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="12.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView id="module_icon" fill="#868686" glyphName="LIGHTBULB_ALT" size="24" textAlignment="CENTER" wrappingWidth="50.0" />
+                                       </graphic>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                    <JFXButton id="module_button" fx:id="successionPlanning" accessibleText="hr/succession/SuccessionPlanning.fxml" alignment="BASELINE_LEFT" onAction="#loadFunction" prefHeight="25.0" prefWidth="321.0" ripplerFill="#0078d7" text="Test Results" textFill="#868686">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="12.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView id="module_icon" fill="#868686" glyphName="BAR_CHART" size="24" textAlignment="CENTER" wrappingWidth="50.0" />
+                                       </graphic>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                        </content>
+                           <graphic>
+                              <FontAwesomeIconView id="module_icon" fill="#868686" size="18" textAlignment="CENTER" wrappingWidth="28.0" />
+                           </graphic>
+                      </TitledPane>
+                        <TitledPane fx:id="tlpCompentency" accessibleText="hr2" text="Competency Management">
+                           <content>
+                              <VBox fx:id="vbxModules2" prefHeight="200.0" prefWidth="250.0" spacing="10.0">
+                                 <children>
+                                    <JFXButton id="module_button" fx:id="learningManagement2" accessibleText="hr/learning/LearningManagement.fxml" alignment="BASELINE_LEFT" buttonType="RAISED" onAction="#loadFunction" prefHeight="25.0" prefWidth="245.0" ripplerFill="#0078d7" text="Job Qualification" textFill="#868686">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="12.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView id="module_icon" fill="#868686" glyphName="GRADUATION_CAP" size="24" textAlignment="CENTER" wrappingWidth="50.0" />
+                                       </graphic>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                           </content>
+                           <graphic>
+                              <FontAwesomeIconView id="module_icon" fill="#868686" size="18" textAlignment="CENTER" wrappingWidth="28.0" />
+                           </graphic>
+                        </TitledPane>
+                        <TitledPane fx:id="tlpSuccession" accessibleText="hr2" text="Succession Planning">
+                           <content>
+                              <VBox fx:id="vbxModules21" prefHeight="200.0" prefWidth="250.0" spacing="10.0">
+                                 <children>
+                                    <JFXButton id="module_button" fx:id="learningManagement21" accessibleText="hr/learning/LearningManagement.fxml" alignment="BASELINE_LEFT" buttonType="RAISED" onAction="#loadFunction" prefHeight="25.0" prefWidth="245.0" ripplerFill="#0078d7" text="Learning Management" textFill="#868686">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="12.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView id="module_icon" fill="#868686" glyphName="GRADUATION_CAP" size="24" textAlignment="CENTER" wrappingWidth="50.0" />
+                                       </graphic>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                    <JFXButton id="module_button" fx:id="trainingManagement21" accessibleText="hr/training/TrainingManagement.fxml" alignment="BASELINE_LEFT" onAction="#loadFunction" prefHeight="25.0" prefWidth="228.0" ripplerFill="#0078d7" text="Training Management" textFill="#868686">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="12.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView id="module_icon" fill="#868686" glyphName="GEARS" size="24" textAlignment="CENTER" wrappingWidth="50.0" />
+                                       </graphic>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                    <JFXButton id="module_button" fx:id="competencyManagement21" accessibleText="hr/competency/CompetencyManagement.fxml" alignment="BASELINE_LEFT" onAction="#loadFunction" prefHeight="25.0" prefWidth="321.0" ripplerFill="#0078d7" text="Competency Management" textFill="#868686">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="12.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView id="module_icon" fill="#868686" glyphName="BOOK" size="24" textAlignment="CENTER" wrappingWidth="50.0" />
+                                       </graphic>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                    <JFXButton id="module_button" fx:id="successionPlanning21" accessibleText="hr/succession/SuccessionPlanning.fxml" alignment="BASELINE_LEFT" onAction="#loadFunction" prefHeight="25.0" prefWidth="321.0" ripplerFill="#0078d7" text="Succession Planning" textFill="#868686">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="12.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView id="module_icon" fill="#868686" glyphName="LINE_CHART" size="24" textAlignment="CENTER" wrappingWidth="50.0" />
+                                       </graphic>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                           </content>
+                           <graphic>
+                              <FontAwesomeIconView id="module_icon" fill="#868686" size="18" textAlignment="CENTER" wrappingWidth="28.0" />
+                           </graphic>
+                        </TitledPane>
+                        <TitledPane fx:id="tlpESS" accessibleText="hr2" text="Employee Self Service">
+                           <content>
+                              <VBox fx:id="vbxModules22" prefHeight="200.0" prefWidth="250.0" spacing="10.0">
+                                 <children>
+                                    <JFXButton id="module_button" fx:id="learningManagement22" accessibleText="hr/learning/LearningManagement.fxml" alignment="BASELINE_LEFT" buttonType="RAISED" onAction="#loadFunction" prefHeight="25.0" prefWidth="245.0" ripplerFill="#0078d7" text="Learning Management" textFill="#868686">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="12.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView id="module_icon" fill="#868686" glyphName="GRADUATION_CAP" size="24" textAlignment="CENTER" wrappingWidth="50.0" />
+                                       </graphic>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                    <JFXButton id="module_button" fx:id="trainingManagement22" accessibleText="hr/training/TrainingManagement.fxml" alignment="BASELINE_LEFT" onAction="#loadFunction" prefHeight="25.0" prefWidth="228.0" ripplerFill="#0078d7" text="Training Management" textFill="#868686">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="12.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView id="module_icon" fill="#868686" glyphName="GEARS" size="24" textAlignment="CENTER" wrappingWidth="50.0" />
+                                       </graphic>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                    <JFXButton id="module_button" fx:id="competencyManagement22" accessibleText="hr/competency/CompetencyManagement.fxml" alignment="BASELINE_LEFT" onAction="#loadFunction" prefHeight="25.0" prefWidth="321.0" ripplerFill="#0078d7" text="Competency Management" textFill="#868686">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="12.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView id="module_icon" fill="#868686" glyphName="BOOK" size="24" textAlignment="CENTER" wrappingWidth="50.0" />
+                                       </graphic>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                    <JFXButton id="module_button" fx:id="successionPlanning22" accessibleText="hr/succession/SuccessionPlanning.fxml" alignment="BASELINE_LEFT" onAction="#loadFunction" prefHeight="25.0" prefWidth="321.0" ripplerFill="#0078d7" text="Succession Planning" textFill="#868686">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="12.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView id="module_icon" fill="#868686" glyphName="LINE_CHART" size="24" textAlignment="CENTER" wrappingWidth="50.0" />
+                                       </graphic>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                           </content>
+                           <graphic>
+                              <FontAwesomeIconView id="module_icon" fill="#868686" size="18" textAlignment="CENTER" wrappingWidth="28.0" />
+                           </graphic>
+                        </TitledPane>
+                        <TitledPane fx:id="tlpSchedule" accessibleText="hr3" text="Shift and Schedule">
+                           <content>
+                              <VBox fx:id="vbxModules12" prefHeight="200.0" prefWidth="250.0" spacing="10.0">
+                                 <children>
+                                    <JFXButton id="module_button" fx:id="trainingManagement12" accessibleText="hr/training/TrainingManagement.fxml" alignment="BASELINE_LEFT" onAction="#loadFunction" prefHeight="25.0" prefWidth="228.0" ripplerFill="#0078d7" text="Trainings" textFill="#868686">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="12.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView id="module_icon" fill="#868686" glyphName="GEARS" size="24" textAlignment="CENTER" wrappingWidth="50.0" />
+                                       </graphic>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                           </content>
+                           <graphic>
+                              <FontAwesomeIconView id="module_icon" fill="#868686" size="18" textAlignment="CENTER" wrappingWidth="28.0" />
+                           </graphic>
+                        </TitledPane>
+                        <TitledPane fx:id="tlpTimeSheet" accessibleText="hr3" text="Timesheet Management">
+                           <content>
+                              <VBox fx:id="vbxModules4" prefHeight="200.0" prefWidth="250.0" spacing="10.0">
+                                 <children>
+                                    <JFXButton id="module_button" fx:id="competencyManagement2" accessibleText="hr/competency/CompetencyManagement.fxml" alignment="BASELINE_LEFT" onAction="#loadFunction" prefHeight="25.0" prefWidth="321.0" ripplerFill="#0078d7" text="Modules" textFill="#868686">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="12.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView id="module_icon" fill="#868686" glyphName="BOOK" size="24" textAlignment="CENTER" wrappingWidth="50.0" />
+                                       </graphic>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                    <JFXButton id="module_button" fx:id="competencyManagement32" accessibleText="hr/competency/CompetencyManagement.fxml" alignment="BASELINE_LEFT" onAction="#loadFunction" prefHeight="25.0" prefWidth="321.0" ripplerFill="#0078d7" text="Tests" textFill="#868686">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="12.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView id="module_icon" fill="#868686" glyphName="LIGHTBULB_ALT" size="24" textAlignment="CENTER" wrappingWidth="50.0" />
+                                       </graphic>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                    <JFXButton id="module_button" fx:id="successionPlanning2" accessibleText="hr/succession/SuccessionPlanning.fxml" alignment="BASELINE_LEFT" onAction="#loadFunction" prefHeight="25.0" prefWidth="321.0" ripplerFill="#0078d7" text="Test Results" textFill="#868686">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="12.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView id="module_icon" fill="#868686" glyphName="BAR_CHART" size="24" textAlignment="CENTER" wrappingWidth="50.0" />
+                                       </graphic>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                           </content>
+                           <graphic>
+                              <FontAwesomeIconView id="module_icon" fill="#868686" size="18" textAlignment="CENTER" wrappingWidth="28.0" />
+                           </graphic>
+                        </TitledPane>
+                        <TitledPane fx:id="tlpLeave" accessibleText="hr3" text="Leave Management">
+                           <content>
+                              <VBox fx:id="vbxModules24" prefHeight="200.0" prefWidth="250.0" spacing="10.0">
+                                 <children>
+                                    <JFXButton id="module_button" fx:id="learningManagement24" accessibleText="hr/learning/LearningManagement.fxml" alignment="BASELINE_LEFT" buttonType="RAISED" onAction="#loadFunction" prefHeight="25.0" prefWidth="245.0" ripplerFill="#0078d7" text="Job Qualification" textFill="#868686">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="12.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView id="module_icon" fill="#868686" glyphName="GRADUATION_CAP" size="24" textAlignment="CENTER" wrappingWidth="50.0" />
+                                       </graphic>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                           </content>
+                           <graphic>
+                              <FontAwesomeIconView id="module_icon" fill="#868686" size="18" textAlignment="CENTER" wrappingWidth="28.0" />
+                           </graphic>
+                        </TitledPane>
+                        <TitledPane fx:id="tlpClaims" accessibleText="hr3" text="Claims and Reimbursement">
+                           <content>
+                              <VBox fx:id="vbxModules212" prefHeight="200.0" prefWidth="250.0" spacing="10.0">
+                                 <children>
+                                    <JFXButton id="module_button" fx:id="learningManagement212" accessibleText="hr/learning/LearningManagement.fxml" alignment="BASELINE_LEFT" buttonType="RAISED" onAction="#loadFunction" prefHeight="25.0" prefWidth="245.0" ripplerFill="#0078d7" text="Learning Management" textFill="#868686">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="12.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView id="module_icon" fill="#868686" glyphName="GRADUATION_CAP" size="24" textAlignment="CENTER" wrappingWidth="50.0" />
+                                       </graphic>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                    <JFXButton id="module_button" fx:id="trainingManagement212" accessibleText="hr/training/TrainingManagement.fxml" alignment="BASELINE_LEFT" onAction="#loadFunction" prefHeight="25.0" prefWidth="228.0" ripplerFill="#0078d7" text="Training Management" textFill="#868686">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="12.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView id="module_icon" fill="#868686" glyphName="GEARS" size="24" textAlignment="CENTER" wrappingWidth="50.0" />
+                                       </graphic>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                    <JFXButton id="module_button" fx:id="competencyManagement212" accessibleText="hr/competency/CompetencyManagement.fxml" alignment="BASELINE_LEFT" onAction="#loadFunction" prefHeight="25.0" prefWidth="321.0" ripplerFill="#0078d7" text="Competency Management" textFill="#868686">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="12.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView id="module_icon" fill="#868686" glyphName="BOOK" size="24" textAlignment="CENTER" wrappingWidth="50.0" />
+                                       </graphic>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                    <JFXButton id="module_button" fx:id="successionPlanning212" accessibleText="hr/succession/SuccessionPlanning.fxml" alignment="BASELINE_LEFT" onAction="#loadFunction" prefHeight="25.0" prefWidth="321.0" ripplerFill="#0078d7" text="Succession Planning" textFill="#868686">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="12.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView id="module_icon" fill="#868686" glyphName="LINE_CHART" size="24" textAlignment="CENTER" wrappingWidth="50.0" />
+                                       </graphic>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                           </content>
+                           <graphic>
+                              <FontAwesomeIconView id="module_icon" fill="#868686" size="18" textAlignment="CENTER" wrappingWidth="28.0" />
+                           </graphic>
+                        </TitledPane>
+                        <TitledPane fx:id="tlpTimeAndAttendance" accessibleText="hr3" text="Time and Attendance">
+                           <content>
+                              <VBox fx:id="vbxModules222" prefHeight="200.0" prefWidth="250.0" spacing="10.0">
+                                 <children>
+                                    <JFXButton id="module_button" fx:id="learningManagement222" accessibleText="hr/learning/LearningManagement.fxml" alignment="BASELINE_LEFT" buttonType="RAISED" onAction="#loadFunction" prefHeight="25.0" prefWidth="245.0" ripplerFill="#0078d7" text="Learning Management" textFill="#868686">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="12.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView id="module_icon" fill="#868686" glyphName="GRADUATION_CAP" size="24" textAlignment="CENTER" wrappingWidth="50.0" />
+                                       </graphic>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                    <JFXButton id="module_button" fx:id="trainingManagement222" accessibleText="hr/training/TrainingManagement.fxml" alignment="BASELINE_LEFT" onAction="#loadFunction" prefHeight="25.0" prefWidth="228.0" ripplerFill="#0078d7" text="Training Management" textFill="#868686">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="12.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView id="module_icon" fill="#868686" glyphName="GEARS" size="24" textAlignment="CENTER" wrappingWidth="50.0" />
+                                       </graphic>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                    <JFXButton id="module_button" fx:id="competencyManagement222" accessibleText="hr/competency/CompetencyManagement.fxml" alignment="BASELINE_LEFT" onAction="#loadFunction" prefHeight="25.0" prefWidth="321.0" ripplerFill="#0078d7" text="Competency Management" textFill="#868686">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="12.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView id="module_icon" fill="#868686" glyphName="BOOK" size="24" textAlignment="CENTER" wrappingWidth="50.0" />
+                                       </graphic>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                    <JFXButton id="module_button" fx:id="successionPlanning222" accessibleText="hr/succession/SuccessionPlanning.fxml" alignment="BASELINE_LEFT" onAction="#loadFunction" prefHeight="25.0" prefWidth="321.0" ripplerFill="#0078d7" text="Succession Planning" textFill="#868686">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="12.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView id="module_icon" fill="#868686" glyphName="LINE_CHART" size="24" textAlignment="CENTER" wrappingWidth="50.0" />
+                                       </graphic>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                           </content>
+                           <graphic>
+                              <FontAwesomeIconView id="module_icon" fill="#868686" size="18" textAlignment="CENTER" wrappingWidth="28.0" />
+                           </graphic>
+                        </TitledPane>
+                        <TitledPane fx:id="tlpPayroll" accessibleText="hr4" text="Payroll">
+                           <content>
+                              <VBox fx:id="vbxModules41" prefHeight="200.0" prefWidth="250.0" spacing="10.0">
+                                 <children>
+                                    <JFXButton id="module_button" fx:id="competencyManagement23" accessibleText="hr/competency/CompetencyManagement.fxml" alignment="BASELINE_LEFT" onAction="#loadFunction" prefHeight="25.0" prefWidth="321.0" ripplerFill="#0078d7" text="Modules" textFill="#868686">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="12.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView id="module_icon" fill="#868686" glyphName="BOOK" size="24" textAlignment="CENTER" wrappingWidth="50.0" />
+                                       </graphic>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                    <JFXButton id="module_button" fx:id="competencyManagement321" accessibleText="hr/competency/CompetencyManagement.fxml" alignment="BASELINE_LEFT" onAction="#loadFunction" prefHeight="25.0" prefWidth="321.0" ripplerFill="#0078d7" text="Tests" textFill="#868686">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="12.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView id="module_icon" fill="#868686" glyphName="LIGHTBULB_ALT" size="24" textAlignment="CENTER" wrappingWidth="50.0" />
+                                       </graphic>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                    <JFXButton id="module_button" fx:id="successionPlanning23" accessibleText="hr/succession/SuccessionPlanning.fxml" alignment="BASELINE_LEFT" onAction="#loadFunction" prefHeight="25.0" prefWidth="321.0" ripplerFill="#0078d7" text="Test Results" textFill="#868686">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="12.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView id="module_icon" fill="#868686" glyphName="BAR_CHART" size="24" textAlignment="CENTER" wrappingWidth="50.0" />
+                                       </graphic>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                           </content>
+                           <graphic>
+                              <FontAwesomeIconView id="module_icon" fill="#868686" size="18" textAlignment="CENTER" wrappingWidth="28.0" />
+                           </graphic>
+                        </TitledPane>
+                        <TitledPane fx:id="tlpCompensationPlanning" accessibleText="hr4" text="Compensation Planning">
+                           <content>
+                              <VBox fx:id="vbxModules241" prefHeight="200.0" prefWidth="250.0" spacing="10.0">
+                                 <children>
+                                    <JFXButton id="module_button" fx:id="learningManagement241" accessibleText="hr/learning/LearningManagement.fxml" alignment="BASELINE_LEFT" buttonType="RAISED" onAction="#loadFunction" prefHeight="25.0" prefWidth="245.0" ripplerFill="#0078d7" text="Job Qualification" textFill="#868686">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="12.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView id="module_icon" fill="#868686" glyphName="GRADUATION_CAP" size="24" textAlignment="CENTER" wrappingWidth="50.0" />
+                                       </graphic>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                           </content>
+                           <graphic>
+                              <FontAwesomeIconView id="module_icon" fill="#868686" size="18" textAlignment="CENTER" wrappingWidth="28.0" />
+                           </graphic>
+                        </TitledPane>
+                        <TitledPane fx:id="tlpHRAnalytics" accessibleText="hr4" text="HR Analytics">
+                           <content>
+                              <VBox fx:id="vbxModules2121" prefHeight="200.0" prefWidth="250.0" spacing="10.0">
+                                 <children>
+                                    <JFXButton id="module_button" fx:id="learningManagement2121" accessibleText="hr/learning/LearningManagement.fxml" alignment="BASELINE_LEFT" buttonType="RAISED" onAction="#loadFunction" prefHeight="25.0" prefWidth="245.0" ripplerFill="#0078d7" text="Learning Management" textFill="#868686">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="12.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView id="module_icon" fill="#868686" glyphName="GRADUATION_CAP" size="24" textAlignment="CENTER" wrappingWidth="50.0" />
+                                       </graphic>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                    <JFXButton id="module_button" fx:id="trainingManagement2121" accessibleText="hr/training/TrainingManagement.fxml" alignment="BASELINE_LEFT" onAction="#loadFunction" prefHeight="25.0" prefWidth="228.0" ripplerFill="#0078d7" text="Training Management" textFill="#868686">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="12.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView id="module_icon" fill="#868686" glyphName="GEARS" size="24" textAlignment="CENTER" wrappingWidth="50.0" />
+                                       </graphic>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                    <JFXButton id="module_button" fx:id="competencyManagement2121" accessibleText="hr/competency/CompetencyManagement.fxml" alignment="BASELINE_LEFT" onAction="#loadFunction" prefHeight="25.0" prefWidth="321.0" ripplerFill="#0078d7" text="Competency Management" textFill="#868686">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="12.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView id="module_icon" fill="#868686" glyphName="BOOK" size="24" textAlignment="CENTER" wrappingWidth="50.0" />
+                                       </graphic>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                    <JFXButton id="module_button" fx:id="successionPlanning2121" accessibleText="hr/succession/SuccessionPlanning.fxml" alignment="BASELINE_LEFT" onAction="#loadFunction" prefHeight="25.0" prefWidth="321.0" ripplerFill="#0078d7" text="Succession Planning" textFill="#868686">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="12.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView id="module_icon" fill="#868686" glyphName="LINE_CHART" size="24" textAlignment="CENTER" wrappingWidth="50.0" />
+                                       </graphic>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                           </content>
+                           <graphic>
+                              <FontAwesomeIconView id="module_icon" fill="#868686" size="18" textAlignment="CENTER" wrappingWidth="28.0" />
+                           </graphic>
+                        </TitledPane>
+                        <TitledPane fx:id="tlpCoreHuman" accessibleText="hr4" text="Core Human Capital">
+                           <content>
+                              <VBox fx:id="vbxModules2221" prefHeight="200.0" prefWidth="250.0" spacing="10.0">
+                                 <children>
+                                    <JFXButton id="module_button" fx:id="learningManagement2221" accessibleText="hr/learning/LearningManagement.fxml" alignment="BASELINE_LEFT" buttonType="RAISED" onAction="#loadFunction" prefHeight="25.0" prefWidth="245.0" ripplerFill="#0078d7" text="Learning Management" textFill="#868686">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="12.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView id="module_icon" fill="#868686" glyphName="GRADUATION_CAP" size="24" textAlignment="CENTER" wrappingWidth="50.0" />
+                                       </graphic>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                    <JFXButton id="module_button" fx:id="trainingManagement2221" accessibleText="hr/training/TrainingManagement.fxml" alignment="BASELINE_LEFT" onAction="#loadFunction" prefHeight="25.0" prefWidth="228.0" ripplerFill="#0078d7" text="Training Management" textFill="#868686">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="12.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView id="module_icon" fill="#868686" glyphName="GEARS" size="24" textAlignment="CENTER" wrappingWidth="50.0" />
+                                       </graphic>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                    <JFXButton id="module_button" fx:id="competencyManagement2221" accessibleText="hr/competency/CompetencyManagement.fxml" alignment="BASELINE_LEFT" onAction="#loadFunction" prefHeight="25.0" prefWidth="321.0" ripplerFill="#0078d7" text="Competency Management" textFill="#868686">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="12.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView id="module_icon" fill="#868686" glyphName="BOOK" size="24" textAlignment="CENTER" wrappingWidth="50.0" />
+                                       </graphic>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                    <JFXButton id="module_button" fx:id="successionPlanning2221" accessibleText="hr/succession/SuccessionPlanning.fxml" alignment="BASELINE_LEFT" onAction="#loadFunction" prefHeight="25.0" prefWidth="321.0" ripplerFill="#0078d7" text="Succession Planning" textFill="#868686">
+                                       <font>
+                                          <Font name="SansSerif Regular" size="12.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView id="module_icon" fill="#868686" glyphName="LINE_CHART" size="24" textAlignment="CENTER" wrappingWidth="50.0" />
+                                       </graphic>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                           </content>
+                           <graphic>
+                              <FontAwesomeIconView id="module_icon" fill="#868686" size="18" textAlignment="CENTER" wrappingWidth="28.0" />
+                           </graphic>
+                        </TitledPane>
+                    </panes>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Accordion>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </children>
+   <effect>
+      <DropShadow blurType="GAUSSIAN" color="GREY" height="10.0" radius="4.5" width="10.0" />
+   </effect>
+</AnchorPane>

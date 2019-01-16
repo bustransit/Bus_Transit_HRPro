@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.textfield.CustomTextField?>
+
+<AnchorPane id="AnchorPane" fx:id="container" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" stylesheets="@../../../css/jfoenix-design.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bus_transit.hr.learning.LearningManagementController">
+   <children>
+      <AnchorPane fx:id="heading" prefHeight="60.0" prefWidth="628.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" color="GREY" height="5.0" radius="2.0" width="5.0" />
+         </effect>
+         <children>
+            <Label layoutX="32.0" layoutY="20.0" text="Learning Management" textFill="#2d2d2d" AnchorPane.leftAnchor="25.0">
+               <font>
+                  <Font name="SansSerif Regular" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <StackPane fx:id="stackpane" layoutX="10.0" layoutY="60.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="60.0">
+         <children>
+            <AnchorPane>
+               <children>
+                  <JFXTabPane fx:id="content" rotateGraphic="true" stylesheets="@../../../css/StyleSheet_1.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <tabs>
+                        <Tab fx:id="modules" text="Modules">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <BorderPane layoutX="150.0" layoutY="61.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                                       <effect>
+                                          <DropShadow color="SILVER" />
+                                       </effect>
+                                       <center>
+                                          <ScrollPane hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                             <content>
+                                                <FlowPane fx:id="flpModules" hgap="20.0" prefHeight="200.0" prefWidth="200.0" prefWrapLength="1000.0" style="-fx-background-color: white;" vgap="20.0">
+                                                   <padding>
+                                                      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                                   </padding>
+                                                   <effect>
+                                                      <DropShadow />
+                                                   </effect>
+                                                </FlowPane>
+                                             </content>
+                                          </ScrollPane>
+                                       </center>
+                                       <top>
+                                          <AnchorPane prefHeight="33.0" prefWidth="1258.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+                                             <effect>
+                                                <DropShadow blurType="GAUSSIAN" color="SILVER" height="10.0" radius="4.5" width="10.0" />
+                                             </effect>
+                                             <children>
+                                                <CustomTextField fx:id="txt_searchAll" layoutX="22.0" layoutY="15.0" onKeyReleased="#searchModule" prefHeight="35.0" prefWidth="300.0" promptText="Seach module by title..." style="-fx-background-color: white; -fx-background-radius: 0; -fx-border-color: #DCDCDC;">
+                                                   <font>
+                                                      <Font name="Calibri" size="14.0" />
+                                                   </font>
+                                                </CustomTextField>
+                                                <JFXButton fx:id="btnNew" contentDisplay="GRAPHIC_ONLY" onAction="#newLearningModule" prefHeight="36.0" prefWidth="36.0" ripplerFill="BLACK" style="-fx-background-color: #0078D7; -fx-background-radius: 2;" text="View" textFill="WHITE" AnchorPane.bottomAnchor="24.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                                   <font>
+                                                      <Font name="Calibri Bold" size="14.0" />
+                                                   </font>
+                                                   <effect>
+                                                      <DropShadow color="GREY" height="10.0" offsetX="1.0" offsetY="1.0" radius="4.5" width="10.0" />
+                                                   </effect>
+                                                   <graphic>
+                                                      <FontAwesomeIconView fill="WHITE" glyphName="PLUS" size="20" />
+                                                   </graphic>
+                                                   <tooltip>
+                                                      <Tooltip text="New">
+                                                         <font>
+                                                            <Font name="Calibri" size="12.0" />
+                                                         </font>
+                                                      </Tooltip>
+                                                   </tooltip>
+                                                </JFXButton>
+                                             </children>
+                                          </AnchorPane>
+                                       </top>
+                                    </BorderPane>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab fx:id="test" text="Tests">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                                       <effect>
+                                          <DropShadow color="SILVER" />
+                                       </effect>
+                                       <center>
+                                          <ScrollPane hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                             <content>
+                                                <FlowPane fx:id="flpTestContainer" hgap="20.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" vgap="20.0">
+                                                   <padding>
+                                                      <Insets bottom="10.0" left="20.0" right="10.0" top="20.0" />
+                                                   </padding>
+                                                </FlowPane>
+                                             </content>
+                                             <padding>
+                                                <Insets bottom="50.0" />
+                                             </padding>
+                                          </ScrollPane>
+                                       </center>
+                                       <top>
+                                          <AnchorPane prefHeight="65.0" prefWidth="200.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+                                             <effect>
+                                                <DropShadow blurType="GAUSSIAN" color="SILVER" height="10.0" radius="4.5" width="10.0" />
+                                             </effect>
+                                             <children>
+                                                <CustomTextField fx:id="txt_searchPending1" layoutX="22.0" layoutY="15.0" onKeyReleased="#SearchPendingRequest" prefHeight="35.0" prefWidth="300.0" promptText="Search Test" style="-fx-background-color: white; -fx-background-radius: 0; -fx-border-color: #DCDCDC;">
+                                                   <font>
+                                                      <Font name="Calibri" size="14.0" />
+                                                   </font>
+                                                </CustomTextField>
+                                                <JFXButton fx:id="btnNewTest" contentDisplay="GRAPHIC_ONLY" onAction="#newTest" prefHeight="36.0" prefWidth="36.0" ripplerFill="BLACK" style="-fx-background-color: #0078D7; -fx-background-radius: 2;" text="View" textFill="WHITE" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="15.0">
+                                                   <font>
+                                                      <Font name="Calibri Bold" size="14.0" />
+                                                   </font>
+                                                   <effect>
+                                                      <DropShadow color="GREY" height="10.0" offsetX="1.0" offsetY="1.0" radius="4.5" width="10.0" />
+                                                   </effect>
+                                                   <graphic>
+                                                      <FontAwesomeIconView fill="WHITE" glyphName="PLUS" size="20" />
+                                                   </graphic>
+                                                   <tooltip>
+                                                      <Tooltip text="New">
+                                                         <font>
+                                                            <Font name="Calibri" size="12.0" />
+                                                         </font>
+                                                      </Tooltip>
+                                                   </tooltip>
+                                                </JFXButton>
+                                             </children>
+                                          </AnchorPane>
+                                       </top>
+                                    </BorderPane>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab fx:id="learningProgress" text="Test Result">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                                       <effect>
+                                          <DropShadow color="SILVER" />
+                                       </effect>
+                                       <center>
+                                          <ScrollPane hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                             <content>
+                                                <FlowPane fx:id="fplLearningProgress" hgap="20.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" vgap="20.0">
+                                                   <padding>
+                                                      <Insets bottom="20.0" left="100.0" right="100.0" top="20.0" />
+                                                   </padding>
+                                                   <children>
+                                                      <VBox>
+                                                         <children>
+                                                            <JFXButton fx:id="btnPrintResult" onAction="#printTetResults" style="-fx-background-color: #0078D7;" text="Print Results" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="Calibri Bold" size="14.0" />
+                                                               </font>
+                                                            </JFXButton>
+                                                            <PieChart fx:id="pieResults" styleClass="amber-300">
+                                                               <padding>
+                                                                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                               </padding>
+                                                               <effect>
+                                                                  <DropShadow color="#0000004d" />
+                                                               </effect>
+                                                               <VBox.margin>
+                                                                  <Insets top="20.0" />
+                                                               </VBox.margin></PieChart>
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
+                                                </FlowPane>
+                                             </content>
+                                          </ScrollPane>
+                                       </center>
+                                       <top>
+                                          <AnchorPane prefHeight="65.0" prefWidth="200.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+                                             <effect>
+                                                <DropShadow blurType="GAUSSIAN" color="SILVER" height="10.0" radius="4.5" width="10.0" />
+                                             </effect>
+                                          </AnchorPane>
+                                       </top>
+                                    </BorderPane>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                     </tabs>
+                  </JFXTabPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

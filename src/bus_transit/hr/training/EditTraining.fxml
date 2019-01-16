@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="ancTrainingUtility" prefHeight="539.0" prefWidth="666.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane fx:id="ancHeader" layoutX="125.0" layoutY="50.0" prefHeight="50.0" prefWidth="340.0" style="-fx-background-color: #0078D7;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label fx:id="lblTrainingHeader" accessibleText="new" layoutX="21.0" layoutY="14.0" text="Edit Training" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <HBox layoutY="50.0" minWidth="340.0" prefHeight="426.0" prefWidth="657.0" spacing="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="9.0" AnchorPane.topAnchor="60.0">
+         <children>
+            <VBox fx:id="vbxContentCol1" prefHeight="392.0" prefWidth="320.0" spacing="10.0" HBox.hgrow="NEVER">
+               <children>
+                  <Label fx:id="lblTrainingTitle" text="Title:" />
+                  <JFXTextField fx:id="tfTrainingTitle" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#setTitle" prefHeight="40.0" prefWidth="300.0" promptText=" " />
+                  <Group fx:id="grpNote1">
+                     <children>
+                        <Label fx:id="lblDescription" text="Description:" />
+                        <TextArea fx:id="txtDescription" layoutY="27.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyReleased="#setDescription" prefHeight="120.0" prefWidth="300.0" />
+                     </children>
+                  </Group>
+                  <Group>
+                     <children>
+                        <Label fx:id="lblVenue" text="Venue" />
+                        <JFXTextField fx:id="tfVenue" layoutY="27.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#setVenue" prefHeight="40.0" prefWidth="300.0" promptText=" " />
+                     </children>
+                  </Group>
+                  <HBox alignment="CENTER_LEFT" prefHeight="91.0" prefWidth="290.0" spacing="20.0" VBox.vgrow="NEVER">
+                     <children>
+                        <Group>
+                           <children>
+                              <Label fx:id="lblTrainingType" text="Type:" />
+                              <JFXComboBox fx:id="cbTrainingType" labelFloat="true" layoutY="27.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#setType" prefHeight="40.0" prefWidth="145.0" style="-fx-border-color: #DCDCDC; -fx-border-radius: 4;" />
+                           </children>
+                        </Group>
+                        <Group>
+                           <children>
+                              <Label fx:id="lblParticipants" layoutX="59.0" layoutY="6.0" text="Number of Participants" />
+                              <JFXTextField fx:id="tfNumberOfParticipants" layoutX="61.0" layoutY="37.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#setNumberOfParticipants" prefHeight="40.0" prefWidth="128.0" promptText=" " />
+                           </children>
+                        </Group>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+            <VBox prefHeight="340.0" prefWidth="300.0" spacing="10.0">
+               <children>
+                  <Group fx:id="grpNote" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Label fx:id="lblNote" text="Note:" />
+                        <TextArea fx:id="txtNote" layoutY="27.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyReleased="#setNote" prefHeight="120.0" prefWidth="300.0" />
+                     </children>
+                  </Group>
+                  <HBox alignment="CENTER_LEFT" spacing="10.0">
+                     <children>
+                        <Label text="Status:" />
+                        <JFXRadioButton fx:id="rbActive" accessibleText="active" onAction="#setTrainingStatus" text="Active">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="status" />
+                           </toggleGroup>
+                        </JFXRadioButton>
+                        <JFXRadioButton fx:id="rbInactive" accessibleText="inactive" onAction="#setTrainingStatus" selected="true" text="Inactive" toggleGroup="$status" />
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+   </children>
+   <stylesheets>
+      <URL value="@../../../css/jfoenix-design.css" />
+      <URL value="@../../../css/StyleSheet.css" />
+      <URL value="@../../../css/StyleSheet_1.css" />
+   </stylesheets>
+</AnchorPane>

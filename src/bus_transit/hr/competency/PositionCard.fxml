@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXNodesList?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox fx:id="vbxPosition" prefHeight="447.0" prefWidth="428.0" spacing="10.0" style="-fx-background-radius: 4; -fx-background-color: white; -fx-border-radius: 4;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bus_transit.hr.competency.PositionCardController">
+   <children>
+      <VBox fx:id="vbxJobDetails">
+         <children>
+            <AnchorPane fx:id="ancPosition">
+               <children>
+                  <JFXButton fx:id="btnShowOptions" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" focusTraversable="false" layoutX="346.0" layoutY="10.0" onAction="#showOptions" style="-fx-background-radius: 13; -fx-border-radius: 13;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="ELLIPSIS_V" nodeOrientation="LEFT_TO_RIGHT" size="18" textAlignment="CENTER" wrappingWidth="10.857142925262451" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <Hyperlink fx:id="hplPosition" onMouseClicked="#goToPositionFullInfo" text="Accounting Manager" textFill="WHITE" AnchorPane.leftAnchor="4.0">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <tooltip>
+                        <Tooltip text="More details about" />
+                     </tooltip>
+                  </Hyperlink>
+               </children>
+            </AnchorPane>
+            <HBox>
+               <VBox.margin>
+                  <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+               </VBox.margin>
+               <children>
+                  <Label contentDisplay="CENTER" prefHeight="21.0" prefWidth="33.0" text="Rate:">
+                     <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets left="4.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Hyperlink fx:id="hplRate" contentDisplay="CENTER" onAction="#goToSalaryGradeInfo" prefHeight="21.0" prefWidth="73.0" text="21,000" HBox.hgrow="ALWAYS">
+                     <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </padding>
+                     <tooltip>
+                        <Tooltip text="More details about Monthly rate" />
+                     </tooltip>
+                  </Hyperlink>
+                  <Label layoutX="130.0" layoutY="10.0" prefHeight="21.0" prefWidth="36.0" text="Code:" wrapText="true">
+                     <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="lblPositionCode" prefHeight="21.0" prefWidth="36.0" text="ACC" wrapText="true" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </HBox>
+            <Text fx:id="txtDescription" strokeType="OUTSIDE" strokeWidth="0.0" text="Responsible in general operations on Accounting department. Holds major decision making related to money and expenses." wrappingWidth="454.0">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="8.0" right="4.0" top="4.0" />
+               </VBox.margin>
+            </Text>
+         </children>
+      </VBox>
+      <JFXTabPane fx:id="tabPane" prefHeight="328.0" prefWidth="466.0" VBox.vgrow="ALWAYS">
+         <tabs>
+            <Tab fx:id="tbQualities" text="Qualities">
+               <content>
+                  <ScrollPane hbarPolicy="NEVER" style="-fx-background-color: transparent;">
+                     <content>
+                        <JFXNodesList fx:id="jfxNdListQualities" spacing="10.0" style="-fx-background-color: white;" />
+                     </content>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </ScrollPane>
+               </content>
+            </Tab>
+            <Tab fx:id="tbResponsibilities" text="Responsibilities">
+               <content>
+                  <ScrollPane hbarPolicy="NEVER" style="-fx-background-color: transparent;">
+                     <content>
+                        <JFXNodesList fx:id="jfxNdListResponsibilities" spacing="10.0" style="-fx-background-color: white;" />
+                     </content>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </ScrollPane>
+               </content>
+            </Tab>
+            <Tab fx:id="tbBenefits" text="Benefits">
+               <content>
+                  <ScrollPane hbarPolicy="NEVER" style="-fx-background-color: transparent;">
+                     <content>
+                        <JFXNodesList fx:id="jfxNdListBenefits" spacing="10.0" style="-fx-background-color: white;" />
+                     </content>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </ScrollPane>
+               </content>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+   </children>
+   <effect>
+      <DropShadow color="#00000080" />
+   </effect>
+   <stylesheets>
+      <URL value="@position-card.css" />
+      <URL value="@../../../css/StyleSheet.css" />
+   </stylesheets>
+</VBox>

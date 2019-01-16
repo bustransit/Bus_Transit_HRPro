@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="container" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="340.0" prefWidth="630.0" style="-fx-background-radius: 4;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bus_transit.hr.training.TrainingController">
+   <children>
+      <AnchorPane fx:id="ancPosition" layoutX="10.0" layoutY="10.0" prefHeight="45.0" prefWidth="547.0" style="-fx-background-color: #0078D7;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <JFXButton fx:id="btnShowOptions" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" focusTraversable="false" layoutX="346.0" layoutY="10.0" onAction="#showOptions" style="-fx-background-radius: 13; -fx-border-radius: 13;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="ELLIPSIS_V" nodeOrientation="LEFT_TO_RIGHT" size="18" textAlignment="CENTER" wrappingWidth="10.857142925262451" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Label prefHeight="27.0" prefWidth="27.0" text="Training Title" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font name="Calibri Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="ancContent" layoutY="62.0" prefHeight="471.0" prefWidth="604.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="45.0">
+         <children>
+            <HBox prefHeight="4.0" prefWidth="630.0" spacing="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label text="Date: 12/12/2018" />
+                  <Label text="Start: 01:00 PM" />
+                  <Label text="End: 5:00 PM" />
+                  <Label text="Type: Inhouse" />
+               </children>
+            </HBox>
+            <Text fx:id="txtDescription" layoutX="8.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="613.13671875" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </AnchorPane>
+   </children>
+   <effect>
+      <DropShadow color="#40404099" />
+   </effect>
+</AnchorPane>

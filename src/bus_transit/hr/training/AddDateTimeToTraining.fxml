@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="ancTrainingUtility" prefHeight="359.0" prefWidth="572.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane fx:id="ancHeader" layoutX="125.0" layoutY="50.0" prefHeight="50.0" prefWidth="438.0" style="-fx-background-color: #0078D7;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label fx:id="lblTrainingTitle" accessibleText="new" layoutX="10.0" layoutY="14.0" prefHeight="28.0" prefWidth="551.0" text="Training Title Here" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="24.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btn_close" contentDisplay="GRAPHIC_ONLY" layoutX="162.0" layoutY="13.0" onAction="#Close" prefHeight="48.0" prefWidth="48.0" ripplerFill="RED" style="-fx-background-color: transparent; -fx-background-radius: 0;" visible="false" AnchorPane.bottomAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+               <graphic>
+                  <MaterialDesignIconView fill="WHITE" glyphName="CLOSE" size="20" />
+               </graphic>
+            </JFXButton>
+            <HBox fx:id="vbxActions" alignment="CENTER_RIGHT" layoutX="336.0" prefHeight="47.0" prefWidth="160.0" spacing="10.0" visible="false" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <JFXButton fx:id="btnReset" onAction="#reset" prefHeight="27.0" prefWidth="79.0" style="-fx-background-color: white; -fx-background-radius: 2;" text="RESET" textFill="#757575">
+                     <font>
+                        <Font name="Calibri Bold" size="14.0" />
+                     </font>
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" color="SILVER" height="10.0" offsetX="1.0" offsetY="1.0" radius="4.5" width="10.0" />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton fx:id="btnSave" onAction="#save" prefHeight="27.0" prefWidth="77.0" styleClass="green-A700" text="SAVE" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri Bold" size="14.0" />
+                     </font>
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" color="GREY" height="10.0" offsetX="1.0" offsetY="1.0" radius="4.5" width="10.0" />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <HBox layoutY="50.0" prefHeight="309.0" prefWidth="544.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+         <children>
+            <VBox fx:id="vbxContentCol2" alignment="TOP_CENTER" prefHeight="309.0" prefWidth="258.0" spacing="10.0" HBox.hgrow="NEVER">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <children>
+                  <Group>
+                     <children>
+                        <Label fx:id="lblTrainingDate" text="Date: MM/DD/2018" />
+                        <JFXDatePicker fx:id="dpTrainingDate" layoutY="27.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#setTrainingDate" prefHeight="40.0" prefWidth="300.0" />
+                     </children>
+                  </Group>
+                  <Group>
+                     <children>
+                        <HBox maxWidth="-Infinity" minWidth="-Infinity">
+                           <children>
+                              <Group>
+                                 <children>
+                                    <Label fx:id="lblTrainingStart" text="From: HH:MM AM/PM" />
+                                    <JFXTimePicker fx:id="tpTrainingStart" layoutY="27.0" maxWidth="-Infinity" minWidth="-Infinity" onAction="#setTrainingStart" prefHeight="40.0" prefWidth="150.0" />
+                                 </children>
+                              </Group>
+                              <Group>
+                                 <children>
+                                    <Label fx:id="lblTrainingEnd" text="To: HH:MM AM/PM" />
+                                    <JFXTimePicker fx:id="tpTrainingEnd" layoutY="27.0" maxWidth="-Infinity" minWidth="-Infinity" onAction="#setTrainingEnd" prefHeight="40.0" prefWidth="150.0" />
+                                 </children>
+                              </Group>
+                           </children>
+                        </HBox>
+                        <JFXButton fx:id="btnAdd" layoutX="216.0" layoutY="86.0" onAction="#add" prefHeight="27.0" prefWidth="77.0" styleClass="green-A700" text="Add" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Calibri Bold" size="14.0" />
+                           </font>
+                           <effect>
+                              <DropShadow blurType="GAUSSIAN" color="GREY" height="10.0" offsetX="1.0" offsetY="1.0" radius="4.5" width="10.0" />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                     </children>
+                  </Group>
+               </children>
+            </VBox>
+            <ScrollPane prefHeight="309.0" prefWidth="269.0" HBox.hgrow="ALWAYS">
+               <content>
+                  <VBox fx:id="vbxDate" prefHeight="307.0" prefWidth="261.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="20.0" prefWidth="332.0" spacing="10.0">
+                           <children>
+                              <Label text="12/12/2018" />
+                              <Label text="2:00 PM" />
+                              <Label text="5:00PM" />
+                              <JFXButton buttonType="RAISED" contentDisplay="GRAPHIC_ONLY">
+                                 <graphic>
+                                    <FontAwesomeIconView glyphName="CLOSE" size="18" />
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </VBox>
+               </content>
+            </ScrollPane>
+         </children>
+      </HBox>
+   </children>
+   <stylesheets>
+      <URL value="@../../../css/jfoenix-design.css" />
+      <URL value="@../../../css/StyleSheet.css" />
+      <URL value="@../../../css/StyleSheet_1.css" />
+   </stylesheets>
+</AnchorPane>

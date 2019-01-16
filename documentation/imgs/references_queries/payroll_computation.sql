@@ -1,0 +1,1 @@
+UPDATE salary_grade SET daily_rate = (basic_pay * 12)/ 261;

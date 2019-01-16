@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" minHeight="160.0" minWidth="600.0" prefHeight="160.0" prefWidth="600.0" text=" " xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <graphic>
+      <FlowPane prefHeight="160.0" prefWidth="602.0">
+         <children>
+            <Label fx:id="title" prefHeight="37.0" prefWidth="481.0" text="Developing leaders around you">
+               <font>
+                  <Font name="Calibri Bold" size="18.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btnEdit" contentDisplay="GRAPHIC_ONLY" onAction="#SaveRequest" prefHeight="35.0" prefWidth="40.0" ripplerFill="BLACK" style="-fx-background-color: #0078D7; -fx-background-radius: 2;" text="SAVE REQUEST" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow color="GREY" height="10.0" offsetX="1.0" offsetY="1.0" radius="4.5" width="10.0" />
+               </effect>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="EDIT" size="20" />
+               </graphic>
+               <tooltip>
+                  <Tooltip text="Save Changes">
+                     <font>
+                        <Font name="Calibri" size="12.0" />
+                     </font>
+                  </Tooltip>
+               </tooltip>
+               <FlowPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </FlowPane.margin>
+            </JFXButton>
+            <JFXButton fx:id="btnView" contentDisplay="GRAPHIC_ONLY" onAction="#CancelRequest" prefHeight="35.0" prefWidth="40.0" ripplerFill="BLACK" style="-fx-background-color: #0078D7; -fx-background-radius: 2;" text="CANCEL REQUEST" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow color="GREY" height="10.0" offsetX="1.0" offsetY="1.0" radius="4.5" width="10.0" />
+               </effect>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="EYE" size="20" />
+               </graphic>
+               <tooltip>
+                  <Tooltip text="Cancel Request">
+                     <font>
+                        <Font name="Calibri" size="12.0" />
+                     </font>
+                  </Tooltip>
+               </tooltip>
+            </JFXButton>
+            <Text fx:id="description" strokeType="OUTSIDE" strokeWidth="0.0" text="Leadership training reading materials for back office personnel. Place sample text or short description for modules here." textAlignment="JUSTIFY" wrappingWidth="580.13671875">
+               <font>
+                  <Font name="Calibri" size="14.0" />
+               </font>
+               <FlowPane.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </FlowPane.margin>
+            </Text>
+            <Label fx:id="date1" prefHeight="17.0" prefWidth="123.0" text="Type: Text">
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+            </Label>
+            <Label fx:id="date" alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="458.0" text="Last update: 12/12/2018">
+               <FlowPane.margin>
+                  <Insets />
+               </FlowPane.margin>
+            </Label>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </FlowPane>
+   </graphic>
+   <effect>
+      <DropShadow color="#75757580" />
+   </effect>
+   <cursor>
+      <Cursor fx:constant="HAND" />
+   </cursor>
+</JFXButton>

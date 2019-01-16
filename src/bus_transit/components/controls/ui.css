@@ -1,0 +1,97 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 12 15, 18, 2:59:46 PM
+    Author     : NelsonDelaTorre
+*/
+
+@import "jfoenix-design.css";
+
+.button{    
+    -fx-font-family: "Arial san-serif" ;
+    -fx-font-size: 14px;
+    /*-fx-font-weight: bold;*/
+    -fx-appearance: button;
+    -fx-text-fill: white;
+    -fx-cursor: hand;      
+    -fx-padding: 8;
+    -fx-border-width: .5;
+    -fx-border-color: #b2b2b2;
+    -fx-border-radius: 4;
+    -fx-backgrund-radius:4;
+    -fx-cursor: hand;
+}
+
+.gray-button{
+    -fx-background-color: #b2b2b2;    
+}
+
+.gray-button:hover{
+    -fx-background-color: #656565;    
+}
+
+.blue-button{
+    -fx-background-color: #0078D7;
+}
+
+.blue-button:hover{
+    -fx-background-color: #1565c0;
+}
+
+.lightblue-button{
+    -fx-background-color: #42a5f5;
+}
+
+.lightblue-button:hover{
+    -fx-background-color: #0091ea;
+}
+
+.green-button{
+    -fx-background-color: #43a047;
+}
+
+.green-button:hover{
+    -fx-background-color: #388e3c;
+}
+
+.orange-button{
+    -fx-background-color: #e65100;
+}
+
+.orange-button:hover{
+    -fx-background-color: #bf360c;
+}
+
+.red-button{
+    -fx-background-color: #d50000;
+}
+
+.red-button:hover{
+    -fx-background-color: maroon;
+}
+
+
+/*
+    Text Fields
+*/
+.jfx-text-field .input-line,
+.jfx-text-field .input-line:focused{
+    -fx-height: 0px;
+    -fx-opacity: 0;
+}
+.jfx-text-field,
+.custom-text-field,
+.text-field{
+    -fx-background-color: white;
+    -fx-padding: 8;
+    -fx-border-width: .5;
+    -fx-border-color: #b2b2b2;
+    -fx-border-radius: 4;
+    -fx-backgrund-radius:4;
+}
+
+
+

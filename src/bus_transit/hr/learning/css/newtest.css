@@ -1,0 +1,16 @@
+/* use this css file to override style from default css */
+
+
+.wizard{
+    -fx-tab-max-height: 0   
+}
+
+.wizard .tab-header-area{        
+    visibility:hidden;    
+}
+
+.question{
+    -fx-background-radius: 4;
+    -fx-border-radius: 4;
+    -fx-border-color: #7a7a7a;
+}

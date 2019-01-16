@@ -1,0 +1,9 @@
+<#if licenseFirst??>
+${licenseFirst}
+</#if>
+${licensePrefix}BESTLINK COLLEGE OF THE PHILIPPINES
+${licensePrefix}This is under License of BSIT 4201
+${licensePrefix}Provincial Bus Transportation System
+<#if licenseLast??>
+${licenseLast}
+</#if>

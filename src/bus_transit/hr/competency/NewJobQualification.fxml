@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="CENTER" hgap="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#keyPressed" prefHeight="567.0" prefWidth="1015.0" style="-fx-background-color: white;" vgap="10.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bus_transit.hr.competency.NewJobQualificationController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="510.0" minWidth="10.0" prefWidth="413.0" />
+    <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" maxWidth="693.0" minWidth="10.0" prefWidth="689.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="521.6666679382324" minHeight="10.0" prefHeight="389.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <VBox fx:id="vbxJobInfo" spacing="10.0" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.valignment="TOP" GridPane.vgrow="ALWAYS">
+         <children>
+            <Label fx:id="lblJobTitle" text="Complete Job Title:" />
+            <TextField fx:id="txtJobTitle" />
+            <Label fx:id="lblManpower" text="Number of Personnel needed:" />
+            <TextField fx:id="txtVacancies" layoutX="20.0" layoutY="47.0" />
+            <Label fx:id="lblDepartment" layoutX="20.0" layoutY="96.0" text="Departement:" />
+            <JFXComboBox fx:id="cbDepartment" onAction="#setDepartment" prefHeight="25.0" prefWidth="362.0">
+               <VBox.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" />
+               </VBox.margin></JFXComboBox>
+            <Label fx:id="lblSalaryGrade" layoutX="20.0" layoutY="172.0" text="Salary Grade:" />
+            <JFXComboBox fx:id="cbSalaryGrade" layoutX="20.0" layoutY="199.0" onAction="#setSalaryCategory" prefHeight="25.0" prefWidth="343.0" />
+            <Label fx:id="lblDescription" text="Description:" />
+            <TextArea fx:id="txtDescription" prefHeight="183.0" prefWidth="414.0" style="-fx-background-color: white;" VBox.vgrow="NEVER">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </TextArea>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+      <JFXTabPane fx:id="tbJobDetails" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="TOP" GridPane.vgrow="ALWAYS">
+         <tabs>
+            <Tab fx:id="tbQualifications" text="Skills and Qualifications">
+              <content>
+                  <VBox>
+                     <children>
+                        <HBox alignment="CENTER_LEFT">
+                           <children>
+                              <Label alignment="TOP_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="589.0" text="Enter text then click here -&gt;" HBox.hgrow="ALWAYS" />
+                              <JFXButton fx:id="btnAddToQualification" accessibleText="qualifications" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" onAction="#addToList" prefHeight="12.0" prefWidth="40.0" ripplerFill="BLACK" style="-fx-background-color: transparent; -fx-background-radius: 30;" stylesheets="@../../../css/jfoenix-design.css" text="SAVE REQUEST" textAlignment="CENTER" textFill="WHITE" HBox.hgrow="NEVER">
+                                 <font>
+                                    <Font name="Calibri" />
+                                 </font>
+                                 <tooltip>
+                                    <Tooltip text="Add to Qualification list">
+                                       <font>
+                                          <Font name="Calibri" size="12.0" />
+                                       </font>
+                                    </Tooltip>
+                                 </tooltip>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <graphic>
+                                    <MaterialDesignIconView fill="#388e3c" glyphName="CHECKBOX_MARKED_CIRCLE" size="24" strokeLineCap="ROUND" textAlignment="CENTER" wrappingWidth="29.0">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </MaterialDesignIconView>
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                        <TextArea fx:id="txtQualification" accessibleText="qualification" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="120.0" prefWidth="459.0" style="-fx-border-color: #DCDCDC; -fx-background-color: white; -fx-background-radius: 4; -fx-border-radius: 4;" wrapText="true" VBox.vgrow="ALWAYS">
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets bottom="10.0" top="6.0" />
+                           </VBox.margin>
+                        </TextArea>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="589.0" text="Click items to 'Edit', Double click to 'Remove on the List'" textAlignment="CENTER">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <ScrollPane hbarPolicy="NEVER" pannable="true" prefHeight="249.0" prefWidth="459.0" style="-fx-background-color: white;" VBox.vgrow="ALWAYS">
+                           <content>
+                              <VBox fx:id="vbxQualification" accessibleText="qualifications" alignment="TOP_CENTER" spacing="10.0" style="-fx-background-color: white;">
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                           </content>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </ScrollPane>
+                     </children>
+                  </VBox>
+              </content>
+            </Tab>
+            <Tab fx:id="tbResponsibilities" text="Responsibilities">
+               <content>
+                  <VBox prefHeight="470.0" prefWidth="565.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT">
+                           <children>
+                              <Label alignment="TOP_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="565.0" text="Enter text then click here --&gt;" HBox.hgrow="ALWAYS" />
+                              <JFXButton fx:id="btnAddToResponsibilities" accessibleText="responsibilities" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" onAction="#addToList" prefHeight="12.0" prefWidth="40.0" ripplerFill="BLACK" style="-fx-background-color: transparent; -fx-background-radius: 30;" stylesheets="@../../../css/jfoenix-design.css" text="SAVE REQUEST" textAlignment="CENTER" textFill="WHITE" HBox.hgrow="NEVER">
+                                 <font>
+                                    <Font name="Calibri" />
+                                 </font>
+                                 <tooltip>
+                                    <Tooltip text="Add to Qualification list">
+                                       <font>
+                                          <Font name="Calibri" size="12.0" />
+                                       </font>
+                                    </Tooltip>
+                                 </tooltip>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <graphic>
+                                    <MaterialDesignIconView fill="#388e3c" glyphName="CHECKBOX_MARKED_CIRCLE" size="24" strokeLineCap="ROUND" textAlignment="CENTER" wrappingWidth="29.0">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </MaterialDesignIconView>
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                        <TextArea fx:id="txtResponsibilities" accessibleText="responsibilities" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="120.0" prefWidth="459.0" style="-fx-border-color: #DCDCDC; -fx-background-color: white; -fx-background-radius: 4; -fx-border-radius: 4;" wrapText="true" VBox.vgrow="ALWAYS">
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets bottom="10.0" top="6.0" />
+                           </VBox.margin>
+                        </TextArea>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="589.0" text="Click items to 'Edit', Double click to 'Remove on the List'" textAlignment="CENTER">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <ScrollPane hbarPolicy="NEVER" pannable="true" style="-fx-background-color: white;" VBox.vgrow="ALWAYS">
+                           <content>
+                              <VBox fx:id="vbxResponsibilities" accessibleText="responsibilities" alignment="CENTER_LEFT" spacing="10.0" style="-fx-background-color: white;">
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                           </content>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </ScrollPane>
+                     </children>
+                  </VBox>
+               </content>
+            </Tab>
+            <Tab fx:id="tbBenefits" text="Benefits">
+               <content>
+                  <VBox prefHeight="470.0" prefWidth="565.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT">
+                           <children>
+                              <Label alignment="TOP_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="565.0" text="Enter text then click here -&gt;" textAlignment="RIGHT" HBox.hgrow="ALWAYS" />
+                              <JFXButton fx:id="btnAddToBenefits" accessibleText="benefits" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" onAction="#addToList" prefHeight="12.0" prefWidth="40.0" ripplerFill="BLACK" style="-fx-background-color: transparent; -fx-background-radius: 30;" stylesheets="@../../../css/jfoenix-design.css" text="SAVE REQUEST" textAlignment="CENTER" textFill="WHITE" HBox.hgrow="NEVER">
+                                 <font>
+                                    <Font name="Calibri" />
+                                 </font>
+                                 <tooltip>
+                                    <Tooltip text="Add to Qualification list">
+                                       <font>
+                                          <Font name="Calibri" size="12.0" />
+                                       </font>
+                                    </Tooltip>
+                                 </tooltip>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <graphic>
+                                    <MaterialDesignIconView fill="#388e3c" glyphName="CHECKBOX_MARKED_CIRCLE" size="24" strokeLineCap="ROUND" textAlignment="CENTER" wrappingWidth="29.0">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </MaterialDesignIconView>
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                        <TextArea fx:id="txtBenefits" accessibleText="benefits" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="120.0" prefWidth="459.0" style="-fx-border-color: #DCDCDC; -fx-background-color: white; -fx-background-radius: 4; -fx-border-radius: 4;" wrapText="true">
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </TextArea>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="589.0" text="Click items to 'Edit', Double click to 'Remove on the List'" textAlignment="CENTER">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <ScrollPane accessibleText="benefits" hbarPolicy="NEVER" pannable="true" prefHeight="249.0" prefWidth="459.0" style="-fx-background-color: white;" VBox.vgrow="ALWAYS">
+                           <content>
+                              <VBox fx:id="vbxBenefits" alignment="TOP_CENTER" spacing="10.0" style="-fx-background-color: white;">
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                           </content>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </ScrollPane>
+                     </children>
+                  </VBox>
+               </content>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+   <stylesheets>
+      <URL value="@../../../css/style.css" />
+      <URL value="@NewJobQualification.css" />
+   </stylesheets>
+</GridPane>

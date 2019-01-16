@@ -1,0 +1,90 @@
+/**
+* Mixins for Buttons   
+*/
+@import "_variable.scss";
+@import "_color.scss";
+
+$btnSizes:(xsm, sm, md, lg, xl);
+$btnColors:('gray': gray,
+            'blue': #0078D7,
+            'green':green,
+            'lightblue':lightblue,
+            'orange':orange,
+            'red':red
+);
+
+$darkenAmount : 5;
+@mixin buttonMixin($color, $s){
+    $sz : ($s / $baseTextSize)+0em;
+    -fx-background-color: $color;    
+    -fx-text-fill: $white;
+    -fx-cursor: hand; 
+    -fx-border-raidius: 4px;    
+    -fx-font-size:$sz;
+    &:hover{
+        -fx-background-color: lighten($color,$darkenAmount);
+    }    
+    .glyph-icon{        
+        -glyph-size: $sz;
+    }     
+}
+
+// @mixin gray-button{
+//     -fx-background-color: $gray;    
+//     -fx-text-fill: $white;
+    
+//     &:hover{
+//         -fx-background-color: lighten($gray,$darkenAmount);
+//         -fx-text-fill: $white;
+//     }    
+// }
+
+// @mixin blue-button{
+//     -fx-background-color: $blue;    
+//     -fx-text-fill: $white;
+    
+//     &:hover{
+//         -fx-background-color: lighten($blue,$darkenAmount);
+//         -fx-text-fill: $white;
+//     }
+// }
+
+// @mixin red-button{
+//     -fx-background-color: $red;    
+//     -fx-text-fill: $white;
+    
+//     &:hover{
+//         -fx-background-color: $red;
+//         -fx-text-fill: $white;
+//     }
+// }
+
+// @mixin green-button{
+//     -fx-background-color: $green;
+//     -fx-text-fill: $white;
+    
+//     &:hover{
+//         -fx-background-color: darken($green, $darkenAmount);
+//         -fx-text-fill: $white;        
+//     }    
+// }
+
+// @mixin orange-button{
+//     -fx-background-color: $orange;
+//     -fx-text-fill: $white;
+    
+//     &:hover{
+//         -fx-background-color: lighten($orange,0.6);
+//         -fx-text-fill: $white;
+//     }  
+// }
+
+// @mixin lightblue-button{
+//     -fx-background-color: $lightblue;    
+//     -fx-text-fill: $white;
+    
+//     &:hover{
+//         -fx-background-color: lighten($lightblue,0.6);
+//         -fx-text-fill: $white;
+//     }
+// }

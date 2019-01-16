@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<FlowPane fx:id="modulePane" hgap="10.0" minWidth="600.0" onMouseEntered="#toHoverState" prefHeight="166.0" prefWidth="600.0" style="-fx-background-color: white; -fx-background-radius: 4;" vgap="10.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bus_transit.hr.learning.LearningModuleCardController">
+   <children>
+      <AnchorPane prefHeight="34.0" prefWidth="580.0">
+         <children>
+            <Label fx:id="lblTitle" layoutY="5.0" prefHeight="28.0" prefWidth="408.0" text="Developing leaders around you">
+               <font>
+                  <Font name="Calibri Bold" size="24.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btnModuleOptions" contentDisplay="GRAPHIC_ONLY" layoutX="418.0" layoutY="3.0" prefHeight="31.0" prefWidth="0.0" ripplerFill="BLACK" style="-fx-background-color: transparent; -fx-background-radius: 2;" text="EDIT" visible="false" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow color="GREY" height="10.0" offsetX="1.0" offsetY="1.0" radius="4.5" width="10.0" />
+               </effect>
+               <graphic>
+                  <FontAwesomeIconView fill="#3c3c3c" glyphName="ELLIPSIS_V" size="16" />
+               </graphic>
+               <tooltip>
+                  <Tooltip text="Options">
+                     <font>
+                        <Font name="Calibri" size="12.0" />
+                     </font>
+                  </Tooltip>
+               </tooltip>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <contextMenu>
+                  <ContextMenu>
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                    </items>
+                  </ContextMenu>
+               </contextMenu>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <HBox spacing="8.0">
+         <children>
+            <JFXButton fx:id="btnEdit" contentDisplay="GRAPHIC_ONLY" onAction="#editModule" prefHeight="31.0" prefWidth="0.0" ripplerFill="BLACK" style="-fx-background-color: #0078D7; -fx-background-radius: 2;" text="EDIT" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow color="GREY" height="10.0" offsetX="1.0" offsetY="1.0" radius="4.5" width="10.0" />
+               </effect>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="EDIT" size="16" />
+               </graphic>
+               <tooltip>
+                  <Tooltip text="Edit Details">
+                     <font>
+                        <Font name="Calibri" size="12.0" />
+                     </font>
+                  </Tooltip>
+               </tooltip>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btnAttachFile" contentDisplay="GRAPHIC_ONLY" onAction="#loadFileChooser" prefHeight="31.0" prefWidth="36.0" ripplerFill="BLACK" style="-fx-background-color: #0078D7; -fx-background-radius: 2;" text="Attach" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow color="GREY" height="10.0" offsetX="1.0" offsetY="1.0" radius="4.5" width="10.0" />
+               </effect>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="PAPERCLIP" size="16" />
+               </graphic>
+               <tooltip>
+                  <Tooltip text="Attach File">
+                     <font>
+                        <Font name="Calibri" size="12.0" />
+                     </font>
+                  </Tooltip>
+               </tooltip>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXCheckBox fx:id="chkToggleModuleActivation" checkedColor="#0078d7" onAction="#toggleModuleActivation" prefHeight="33.0" prefWidth="104.0" text="Activate Module">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></JFXCheckBox>
+         </children>
+      </HBox>
+      <Text fx:id="txtDescription" strokeType="OUTSIDE" strokeWidth="0.0" text="Leadership training reading materials for back office personnel. Place sample text or short description for modules here." textAlignment="JUSTIFY" wrappingWidth="580.13671875">
+         <font>
+            <Font name="Calibri" size="14.0" />
+         </font>
+         <FlowPane.margin>
+            <Insets bottom="10.0" top="10.0" />
+         </FlowPane.margin>
+      </Text>
+      <Text fx:id="txtSource" strokeType="OUTSIDE" strokeWidth="0.0" text="source:" textAlignment="RIGHT" wrappingWidth="580.13671875">
+         <font>
+            <Font name="Calibri" size="14.0" />
+         </font>
+      </Text>
+      <HBox prefHeight="17.0" prefWidth="581.0">
+         <children>
+            <Label fx:id="lblType" prefHeight="17.0" prefWidth="747.0" text="Attachments">
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblLastUpdate" alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="457.0" text="Last update: 12/12/2018" />
+         </children>
+      </HBox>
+      <VBox fx:id="vbxAttachments" prefHeight="27.0" prefWidth="578.0" spacing="10.0" />
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+   <effect>
+      <DropShadow blurType="GAUSSIAN" color="#00000080" height="18.03" radius="9.2575" />
+   </effect>
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
+</FlowPane>
